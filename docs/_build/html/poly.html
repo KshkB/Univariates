@@ -1,0 +1,1306 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Polynomials (basics) &#8212; Univariate polynomials and rational functions</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rational functions (basics)" href="ratnl.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/smfld.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Univariate polynomials and rational functions</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Polynomials (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ratnl.html">
+   Rational functions (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cplxnum.html">
+   Complex numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discriminant.html">
+   The discriminant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quadratics.html">
+   Quadratic univariates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cubics.html">
+   The cubics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quartics.html">
+   Quartics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/poly.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpoly.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/poly.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-background">
+   Mathematical background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-polynomial-class">
+   The polynomial class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-imports">
+     Library imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#class-methods">
+     Class methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attributes-and-representation">
+     Attributes and representation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-zero-polynomial">
+       The zero polynomial
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#random-instances-of-poly">
+       Random instances of
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         Poly
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-remarks">
+     Further remarks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic">
+   Arithmetic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-remainder-theorem">
+       The remainder theorem
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#powers">
+     Powers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomial-composition">
+     Polynomial composition
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculus">
+   Calculus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#differentiation">
+     Differentiation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#higher-order-differentiation">
+       Higher order differentiation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integration">
+     Integration
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#higher-order-integration">
+       Higher order integration
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#area-under-the-curve">
+       Area under the curve
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#greatest-common-divisor">
+   Greatest common divisor
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Polynomials (basics)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-background">
+   Mathematical background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-polynomial-class">
+   The polynomial class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-imports">
+     Library imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#class-methods">
+     Class methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attributes-and-representation">
+     Attributes and representation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-zero-polynomial">
+       The zero polynomial
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#random-instances-of-poly">
+       Random instances of
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         Poly
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-remarks">
+     Further remarks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic">
+   Arithmetic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-remainder-theorem">
+       The remainder theorem
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#powers">
+     Powers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomial-composition">
+     Polynomial composition
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculus">
+   Calculus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#differentiation">
+     Differentiation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#higher-order-differentiation">
+       Higher order differentiation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integration">
+     Integration
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#higher-order-integration">
+       Higher order integration
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#area-under-the-curve">
+       Area under the curve
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#greatest-common-divisor">
+   Greatest common divisor
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="polynomials-basics">
+<h1>Polynomials (basics)<a class="headerlink" href="#polynomials-basics" title="Permalink to this headline">¶</a></h1>
+<p>In one variable <span class="math notranslate nohighlight">\(x\)</span>, a polynomial <span class="math notranslate nohighlight">\(x \stackrel{f}{\mapsto} y\)</span> is given by a finite sum,</p>
+<div class="math notranslate nohighlight">
+\[y = f(x) = \sum_{i = 0}^n a_ix^i.
+\]</div>
+<p>Any polynomial <span class="math notranslate nohighlight">\(f\)</span> is specified by a finite string of parameters <span class="math notranslate nohighlight">\((a_0, a_1, \ldots, a_n)\)</span> called its <em>coefficients</em>. If the coefficients are real numbers, <span class="math notranslate nohighlight">\(f\)</span> is a <em>real</em> polynomial; if they are complex, <span class="math notranslate nohighlight">\(f\)</span> is a <em>complex</em> polynomial; if they are integers, <span class="math notranslate nohighlight">\(f\)</span> is an <em>integral</em> polynomial and if they are rational numbers, <span class="math notranslate nohighlight">\(f\)</span> is a <em>rational</em> polynomial.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Rational polynomials are not to be confused with rational <em>functions</em>.</p>
+</div>
+<section id="mathematical-background">
+<h2>Mathematical background<a class="headerlink" href="#mathematical-background" title="Permalink to this headline">¶</a></h2>
+<p>These prefixes for <span class="math notranslate nohighlight">\(f\)</span> (real, complex, integral, rational) are properties of its coefficients. They do not imply anything about the intermediate <span class="math notranslate nohighlight">\(x\)</span>. Here <span class="math notranslate nohighlight">\(x\)</span> is a coordinate and could be valued in any algebraic structure <span class="math notranslate nohighlight">\(R\)</span> where the <em>scalars</em> in <span class="math notranslate nohighlight">\(R\)</span> are one of these prefixes. That is, it must make sense to form <span class="math notranslate nohighlight">\(ax\)</span> and <span class="math notranslate nohighlight">\(ax + bx\)</span> for scalars <span class="math notranslate nohighlight">\(a, b\)</span>, which may be real, complex, integral, rational, etc.</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbb K\)</span> be the ring (usually, field) of scalars. So <span class="math notranslate nohighlight">\(\mathbb K\)</span> could be <span class="math notranslate nohighlight">\(\mathbb R, \mathbb C, \mathbb Z, \mathbb Q\)</span>. Formally, the intermediate <span class="math notranslate nohighlight">\(x\)</span> is a coordinate on <em>affine space over <span class="math notranslate nohighlight">\(\mathbb K\)</span></em>, denoted <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span>. That is, it is a function on <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We distinguish here between spaces and functions on spaces. So here, <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span> is a space in the topological sense while <span class="math notranslate nohighlight">\(x\)</span> is a function on <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span>.</p>
+</div>
+<p>Unlike for spaces, the set of functions on a space forms a nice algebraic structure - a <em>ring</em>. It makes sense to add and multiply functions; it does not necessarily make sense to add and multiply points in a space. The set of (suitably global) functions on <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span> is denoted <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span>. It is precisely the ring of <em>all polynomials in one variable <span class="math notranslate nohighlight">\(x\)</span> with coefficients in <span class="math notranslate nohighlight">\(\mathbb K\)</span></em>.</p>
+<p>There is a formal, duality relation between the affine space <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span> and the ring of polynomials <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span>. The space <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span> is the <em>spectrum</em> of <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span>. And dually, as we have seen, the ring <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span> are the <em>(global) functions</em> on <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>More formally still, <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span> are the global sections of the structure sheaf of <span class="math notranslate nohighlight">\(\mathbb K\)</span>-regular functions on <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span>. But we don’t need to get the mafia of sheaves involved in our business here.</p>
+</div>
+<p>As a final remark, the space <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span> is one dimensional. The generalization to higher dimensions will proceed along lines one might expect. Affine spaces of dimension <span class="math notranslate nohighlight">\(n\)</span>, denoted <span class="math notranslate nohighlight">\(\mathbb A^n_{\mathbb K}\)</span>, are characterized <em>as</em> the spectrum of the polynomial ring <span class="math notranslate nohighlight">\(\mathbb K[x_1, \ldots, x_n]\)</span>.</p>
+</section>
+<section id="the-polynomial-class">
+<h2>The polynomial class<a class="headerlink" href="#the-polynomial-class" title="Permalink to this headline">¶</a></h2>
+<p>We will now describe and illustrate the methods in the polynomial class <code class="docutils literal notranslate"><span class="pre">Poly</span></code>, found in the module <code class="docutils literal notranslate"><span class="pre">polynomial.py</span></code>.</p>
+<section id="library-imports">
+<h3>Library imports<a class="headerlink" href="#library-imports" title="Permalink to this headline">¶</a></h3>
+<p>While preparing this documentation, we store modules coding our function classes in the file <code class="docutils literal notranslate"><span class="pre">class_scripts</span></code>. Below is the appropriate library import of the module <code class="docutils literal notranslate"><span class="pre">polynomial.py</span></code>. It is only necessary for preparing these documents.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">class_scripts</span> <span class="kn">import</span> <span class="n">polynomial</span> <span class="k">as</span> <span class="n">pnml</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="class-methods">
+<h3>Class methods<a class="headerlink" href="#class-methods" title="Permalink to this headline">¶</a></h3>
+<p>The class <code class="docutils literal notranslate"><span class="pre">Poly</span></code> is coded in the module <code class="docutils literal notranslate"><span class="pre">polynomial.py</span></code>. Calling <code class="docutils literal notranslate"><span class="pre">help</span></code> on this class reveals all the methods available therein.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class Poly in module class_scripts.polynomial:
+
+class Poly(builtins.object)
+ |  Poly(coeffs)
+ |  
+ |  Methods defined here:
+ |  
+ |  AreaUnder(self, rng)
+ |  
+ |  Hdiff(self, n)
+ |  
+ |  Hintgr(self, n)
+ |  
+ |  SylvesterMatrix(self, other)
+ |  
+ |  __add__(self, other)
+ |  
+ |  __eq__(self, other)
+ |      Return self==value.
+ |  
+ |  __init__(self, coeffs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __mul__(self, other)
+ |  
+ |  __pow__(self, n)
+ |  
+ |  __repr__(self)
+ |      Return repr(self).
+ |  
+ |  __str__(self)
+ |      Return str(self).
+ |  
+ |  __sub__(self, other)
+ |  
+ |  __truediv__(self, other)
+ |  
+ |  coeff(self, i)
+ |  
+ |  composeWith(self, other)
+ |  
+ |  cplxEval(self, arg)
+ |  
+ |  diff(self)
+ |  
+ |  discriminant(self)
+ |  
+ |  eval(self, num)
+ |  
+ |  gcd(self, other)
+ |  
+ |  intgr(self)
+ |  
+ |  resultant(self, other)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(cls, coeffs)
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+ |  
+ |  significant_figures = 4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="attributes-and-representation">
+<h3>Attributes and representation<a class="headerlink" href="#attributes-and-representation" title="Permalink to this headline">¶</a></h3>
+<p>As mentioned earlier, polynomials are determined by properties of their coefficients. This justifies initializing any instance of the <code class="docutils literal notranslate"><span class="pre">Poly</span></code> by a tuple of coefficients <span class="math notranslate nohighlight">\((a_0, \ldots, a_n)\)</span>. Any instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code> is, after all, a polynomial. When initialized, it has attributes <code class="docutils literal notranslate"><span class="pre">poly.coeffs</span></code> and <code class="docutils literal notranslate"><span class="pre">poly.degree</span></code>. These return the coefficients and the degree respectively of any instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>.</p>
+<p>To illustrate, consider the following polynomial</p>
+<div class="math notranslate nohighlight">
+\[y = f(x) = 1 + 2x
+\]</div>
+<p>Its coefficients are <span class="math notranslate nohighlight">\((1, 2)\)</span>. Passing this into <code class="docutils literal notranslate"><span class="pre">Poly</span></code> gives the polynomial object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">poly</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Poly([1, 2])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The instance <code class="docutils literal notranslate"><span class="pre">poly</span></code> has the following attributes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The coefficients defining </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span><span class="si">}</span><span class="s2"> are </span><span class="si">{</span><span class="n">poly</span><span class="o">.</span><span class="n">coeffs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The degree of </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">poly</span><span class="o">.</span><span class="n">degree</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The coefficients defining Poly([1, 2]) are [1, 2]
+The degree of Poly([1, 2]) is 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>The method <code class="docutils literal notranslate"><span class="pre">coeff()</span></code> passes an integer <code class="docutils literal notranslate"><span class="pre">i</span></code> and returns the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th coefficient. Concerning the above example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">poly</span><span class="o">.</span><span class="n">degree</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">-th coefficient of </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">poly</span><span class="o">.</span><span class="n">coeff</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The 0-th coefficient of Poly([1, 2]) is 1
+The 1-th coefficient of Poly([1, 2]) is 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the index <code class="docutils literal notranslate"><span class="pre">i</span></code> is outside the range of coefficients, the method <code class="docutils literal notranslate"><span class="pre">coeff()</span></code> does not raise an index error as one might expect. Instead it returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</div>
+<p>Note here that <code class="docutils literal notranslate"><span class="pre">Poly([1,</span> <span class="pre">2])</span></code> is the literal representation of an instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. The dunder <code class="docutils literal notranslate"><span class="pre">__str__</span></code> in <code class="docutils literal notranslate"><span class="pre">Poly</span></code> returns instances in a more human readable form, as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;In more human readable form, </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span><span class="si">}</span><span class="s2"> is presented as: </span><span class="si">{</span><span class="n">poly</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In more human readable form, Poly([1, 2]) is presented as: 1x^0 + 2x^1 
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method also allows for easy-to-read representation of negative signs. Consider the polynomials</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+g(x) 
+&amp;= -2 + x - 4x^2;
+\\
+h(x)
+&amp;= -x^2 + 2x^5
+\end{align}
+\end{split}\]</div>
+<p>These are printed as follows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly_1</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">poly_2</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;g(x) is </span><span class="si">{</span><span class="n">poly_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;h(x) is </span><span class="si">{</span><span class="n">poly_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>g(x) is -2x^0 + 1x^1 - 4x^2 
+h(x) is -1x^2 + 2x^5 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that only tuples and lists are passable in <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. Running <code class="docutils literal notranslate"><span class="pre">Poly(a)</span></code> for a scalar (number) <code class="docutils literal notranslate"><span class="pre">a</span></code> will accordingly result in a type error. In order to represent scalars as instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code> we need to pass the tuple <code class="docutils literal notranslate"><span class="pre">(a)</span></code> or list <code class="docutils literal notranslate"><span class="pre">[a]</span></code>. E.g., <code class="docutils literal notranslate"><span class="pre">Poly([1])</span></code> instead of <code class="docutils literal notranslate"><span class="pre">Poly(1)</span></code>.</p>
+</div>
+<section id="the-zero-polynomial">
+<h4>The zero polynomial<a class="headerlink" href="#the-zero-polynomial" title="Permalink to this headline">¶</a></h4>
+<p>The zero polynomial <code class="docutils literal notranslate"><span class="pre">Poly([0])</span></code> is printed as <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">zero</span> <span class="pre">polynomial</span></code>. Don’t be fooled by the print statement however. It is still represented as an honest instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>, as calling <code class="docutils literal notranslate"><span class="pre">repr</span></code> will illustrate. See the following code block.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zero_poly</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">zero_poly</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">zero_poly</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The zero polynomial.
+Poly([0])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="random-instances-of-poly">
+<h4>Random instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code><a class="headerlink" href="#random-instances-of-poly" title="Permalink to this headline">¶</a></h4>
+<p>With the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code> defined, it is easy to generate random instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. Parameters to specify are: its degree and the range of possible values for its coefficients.</p>
+<p>The following code draws on <code class="docutils literal notranslate"><span class="pre">random.randint</span></code> to generate integral polynomials.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="k">def</span> <span class="nf">generateNonzero</span><span class="p">(</span><span class="n">coeff_rng</span><span class="p">):</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="n">coeff_rng</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">coeff_rng</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">num</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">generateNonzero</span><span class="p">(</span><span class="n">coeff_rng</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">generatePoly</span><span class="p">(</span><span class="n">degree</span><span class="p">,</span> <span class="n">coeff_rng</span><span class="p">):</span>
+    <span class="n">coeffs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">degree</span><span class="p">):</span>
+        <span class="n">coeffs</span> <span class="o">+=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="n">coeff_rng</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">coeff_rng</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])]</span>
+        
+    <span class="n">leading_coeff</span> <span class="o">=</span> <span class="n">generateNonzero</span><span class="p">(</span><span class="n">coeff_rng</span><span class="p">)</span>
+    <span class="n">coeffs</span> <span class="o">+=</span> <span class="p">[</span><span class="n">leading_coeff</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">(</span><span class="n">coeffs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Utilizing the function <code class="docutils literal notranslate"><span class="pre">generateNonzero()</span></code> guarantees that the polynomial generated by <code class="docutils literal notranslate"><span class="pre">generatePoly()</span></code> will have the specified degree.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">generatePoly</span></code> we return <code class="docutils literal notranslate"><span class="pre">pnml.Poly</span></code> since the module <code class="docutils literal notranslate"><span class="pre">polynomial.py</span></code> is imported in this notebook as <code class="docutils literal notranslate"><span class="pre">pnml</span></code>.</p>
+</div>
+<p>The following is a list of six randomly generated, cubic polynomials whose coefficients are sampled from <code class="docutils literal notranslate"><span class="pre">-10</span></code> to <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">degree</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">coeff_rng</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Random polynomial number </span><span class="si">{</span><span class="n">_</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">generatePoly</span><span class="p">(</span><span class="n">degree</span><span class="p">,</span> <span class="n">coeff_rng</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Random polynomial number 0: -6x^0 + 5x^1 - 6x^2 + 7x^3 
+Random polynomial number 1: 6x^0 - 8x^1 - 5x^2 - 6x^3 
+Random polynomial number 2: 9x^0 + 3x^1 + 4x^2 + 8x^3 
+Random polynomial number 3: 9x^0 - 7x^1 + 3x^2 - 1x^3 
+Random polynomial number 4: 8x^0 + 4x^1 - 1x^2 + 3x^3 
+Random polynomial number 5: 7x^0 + 5x^1 - 9x^2 - 6x^3 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="further-remarks">
+<h3>Further remarks<a class="headerlink" href="#further-remarks" title="Permalink to this headline">¶</a></h3>
+<p>It is worth mentioning that in <code class="docutils literal notranslate"><span class="pre">__new__</span></code>, before initialising any <code class="docutils literal notranslate"><span class="pre">Poly</span></code> object, the coefficient list passed is checked for any trailing zeroes. Trailing zeroes are deleted. This is accordance with degree <span class="math notranslate nohighlight">\(n\)</span> polynomials being polynomials whose <span class="math notranslate nohighlight">\(n\)</span>-th coefficient is <em>non-zero</em>. E.g., the polynoimal <span class="math notranslate nohighlight">\(1 + 0x\)</span> has degree <em>zero</em>, not degree one.</p>
+<p>To illustrate, the following polynomial defined by coefficient list <code class="docutils literal notranslate"><span class="pre">[-1,</span> <span class="pre">3,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">3,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> is reprsented and printed as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;in code format: </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;in more human readable format: </span><span class="si">{</span><span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the length of the coefficient list is </span><span class="si">{</span><span class="nb">len</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2"> but the polynomial degree is: </span><span class="si">{</span><span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">degree</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>in code format: Poly([-1, 3, 2, 0, 0, 0, 3])
+in more human readable format: -1x^0 + 3x^1 + 2x^2 + 3x^6 
+the length of the coefficient list is 12 but the polynomial degree is: 6
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="arithmetic">
+<h2>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this headline">¶</a></h2>
+<p>The set of polynomials over a field of scalars <span class="math notranslate nohighlight">\(\mathbb K\)</span> forms a ring. This means we can add, subtract and multiply polynomials. We can also combine these operations with scalars since there is a ring embedding <span class="math notranslate nohighlight">\(i:\mathbb K \subset \mathbb K[x]\)</span> given by <span class="math notranslate nohighlight">\(a \mapsto i(a)\)</span>, where <span class="math notranslate nohighlight">\(i(a)\)</span> is the constant function:</p>
+<div class="math notranslate nohighlight">
+\[(i(a))(x) = a.
+\]</div>
+<p>Recall the earlier warning that <code class="docutils literal notranslate"><span class="pre">Poly(a)</span></code> for any number <code class="docutils literal notranslate"><span class="pre">a</span></code> results in a type error. However, <code class="docutils literal notranslate"><span class="pre">Poly([a])</span></code> will return an instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. We can interpret <code class="docutils literal notranslate"><span class="pre">a</span></code> to be an element of <span class="math notranslate nohighlight">\(\mathbb K\)</span> while <code class="docutils literal notranslate"><span class="pre">[a]</span></code> is its image <span class="math notranslate nohighlight">\(i(a)\)</span> in <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span>.</p>
+<section id="evaluation">
+<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
+<p>For any polynomial <span class="math notranslate nohighlight">\(f(x)\)</span> and scalar <span class="math notranslate nohighlight">\(\lambda\)</span>, the evaluation function sends <span class="math notranslate nohighlight">\(f(x) \mapsto f(\lambda)\)</span>. The method  <code class="docutils literal notranslate"><span class="pre">eval()</span></code> on any instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code> playes the role of evaluation. To see this consider the polynomial,</p>
+<div class="math notranslate nohighlight">
+\[f(x) = -1 + 5x + x^3 -7x^4 + 2x^6
+\]</div>
+<p>Evaluating <span class="math notranslate nohighlight">\(f\)</span> at the scalar value <code class="docutils literal notranslate"><span class="pre">107</span></code> is implemented as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly_to_eval</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">scalar</span> <span class="o">=</span> <span class="mi">107</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">poly_to_eval</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">scalar</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3000544372068
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="implementation">
+<h3>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<p>In the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code>, the dunders <code class="docutils literal notranslate"><span class="pre">__add__</span></code>, <code class="docutils literal notranslate"><span class="pre">__mul__</span></code>, <code class="docutils literal notranslate"><span class="pre">__sub__</span></code> and <code class="docutils literal notranslate"><span class="pre">__truediv__</span></code> allow for extending the familiar operators <code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">*,</span> <span class="pre">-,</span> <span class="pre">/</span></code> to instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The division <code class="docutils literal notranslate"><span class="pre">/</span></code> will not yield a rational function however, as the ratio of one polynomial to another is typically understood. It will instead perform polynomial long division (imported from Python’s <code class="docutils literal notranslate"><span class="pre">numpy</span></code> library) and return the divisor and remainder as instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. In particular, it will return two instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>.</p>
+</div>
+<p>To see these arithmetical operations implemented, consider the following two polynomials:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+f(x) = 1 + x
+&amp;&amp;
+\mbox{and}
+&amp;&amp;
+g(x) = -1 + x.
+\end{align}
+\]</div>
+<p>In what follows we will return:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x) + g(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x) - g(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)\cdot g(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)/g(x)\)</span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly_f</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">poly_g</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">poly_f</span> <span class="o">+</span> <span class="n">poly_g</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">poly_f</span> <span class="o">-</span> <span class="n">poly_g</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">poly_f</span> <span class="o">*</span> <span class="n">poly_g</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">poly_f</span> <span class="o">/</span> <span class="n">poly_g</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2x^1 
+2x^0 
+-1.0x^0 + 1.0x^2 
+[Poly([1.0]), Poly([2.0])]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="the-remainder-theorem">
+<h4>The remainder theorem<a class="headerlink" href="#the-remainder-theorem" title="Permalink to this headline">¶</a></h4>
+<p>Another characterisation of polynomial evaluation is by extracting a remainder. That is, in order to evaluate a polynomial <span class="math notranslate nohighlight">\(f(x)\)</span> at a particular value <span class="math notranslate nohighlight">\(x = \lambda\)</span>, form the polynomial <span class="math notranslate nohighlight">\(g(x) = x - \lambda\)</span>, divide <span class="math notranslate nohighlight">\(f\)</span> by <span class="math notranslate nohighlight">\(g\)</span> and extract the remainder. The remainder of <span class="math notranslate nohighlight">\(f(x)/g(x)\)</span> is precisely <span class="math notranslate nohighlight">\(f(\lambda)\)</span>. This result is referred to as the <em>Polynomial remainder theorem</em>. See <a class="reference external" href="https://en.wikipedia.org/wiki/Polynomial_remainder_theorem">this Wikipedia article</a> for more details.</p>
+<p>To see this in practice, recall that we evaluated the polynomial <span class="math notranslate nohighlight">\(f(x) = -1 + 5x + x^3 -7x^4 + 2x^6\)</span> at <span class="math notranslate nohighlight">\(x = 107\)</span> above, yielding the value <code class="docutils literal notranslate"><span class="pre">3000544372068</span></code>. We evaluated this by calling the <code class="docutils literal notranslate"><span class="pre">eval()</span></code> method, which in turn is coded as a direct computation. Via polynomial long division, we can calculate <span class="math notranslate nohighlight">\(f/(x - 107)\)</span> and extract the remainder.
+This is implemented in the following code block.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly_divide_by</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="n">scalar</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">poly_division</span> <span class="o">=</span> <span class="n">poly_to_eval</span> <span class="o">/</span> <span class="n">poly_divide_by</span>
+<span class="n">remainder</span> <span class="o">=</span> <span class="n">poly_division</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3000544372068.0x^0 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Recall that we set <code class="docutils literal notranslate"><span class="pre">scalar</span> <span class="pre">=</span> <span class="pre">107</span></code> earlier. As expected, the remainder above coincides with <code class="docutils literal notranslate"><span class="pre">poly_to_eval.eval(scalar)</span></code>.</p>
+</section>
+</section>
+<section id="powers">
+<h3>Powers<a class="headerlink" href="#powers" title="Permalink to this headline">¶</a></h3>
+<p>With multiplication between instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code> defined, it is straightforward to adapt <code class="docutils literal notranslate"><span class="pre">__pow__</span></code> to <code class="docutils literal notranslate"><span class="pre">Poly</span></code>, allowing for using <code class="docutils literal notranslate"><span class="pre">**</span></code>. To illustrate, the first five powers of <span class="math notranslate nohighlight">\(g(x) = -1 + x\)</span> from above can be obtained as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;g(x) to the </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">-th power: </span><span class="si">{</span><span class="n">poly_g</span><span class="o">**</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>g(x) to the 0-th power: 1x^0 
+g(x) to the 1-th power: -1x^0 + 1x^1 
+g(x) to the 2-th power: 1.0x^0 - 2.0x^1 + 1.0x^2 
+g(x) to the 3-th power: -1.0x^0 + 3.0x^1 - 3.0x^2 + 1.0x^3 
+g(x) to the 4-th power: 1.0x^0 - 4.0x^1 + 6.0x^2 - 4.0x^3 + 1.0x^4 
+g(x) to the 5-th power: -1.0x^0 + 5.0x^1 - 10.0x^2 + 10.0x^3 - 5.0x^4 + 1.0x^5 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="polynomial-composition">
+<h3>Polynomial composition<a class="headerlink" href="#polynomial-composition" title="Permalink to this headline">¶</a></h3>
+<p>In the one dimensional case, polynomials can be unambiguously composed with one another. This is because, at the level of spaces, a polynomial <span class="math notranslate nohighlight">\(f\)</span> over <span class="math notranslate nohighlight">\(\mathbb K\)</span> is defines a morphism <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K} \stackrel{f}{\rightarrow} \mathbb A_{\mathbb K}\)</span>. Hence with two polynomials <span class="math notranslate nohighlight">\(f, g : \mathbb A_{\mathbb K} \rightarrow \mathbb A_{\mathbb K}\)</span> it makes sense to form the composite <span class="math notranslate nohighlight">\(h = f\circ g\)</span> where,</p>
+<div class="math notranslate nohighlight">
+\[h: \mathbb A_{\mathbb K} \stackrel{g}{\longrightarrow} \mathbb A_{\mathbb K} \stackrel{f}{\longrightarrow} \mathbb A_{\mathbb K}.
+\]</div>
+<p>When represented in coordinates, if <span class="math notranslate nohighlight">\(f(x) = \sum_i a_ix^i\)</span> and <span class="math notranslate nohighlight">\(g(x) = \sum_j b_j x^j\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[h(x) = (f\circ g)(x) = \sum_i a_i (g(x))^i = \sum_{i, j} a_i b_j^ix^{i+j}.
+\]</div>
+<p>Note now, with <code class="docutils literal notranslate"><span class="pre">__mul__</span></code> and <code class="docutils literal notranslate"><span class="pre">__pow__</span></code> methods defined for the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code>, code implementing the evaluation method <code class="docutils literal notranslate"><span class="pre">eval()</span></code> can be generalised straightforwardly to implement polynomial composition. This is done through the method <code class="docutils literal notranslate"><span class="pre">composeWith()</span></code> on any instance.</p>
+<p>To illustrate, consider polynomials</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+f(x) = 2x^2
+&amp;&amp;
+\mbox{and}
+&amp;&amp; 
+g(x) = 1 + x^3
+\end{align}
+\]</div>
+<p>The composition is,</p>
+<div class="math notranslate nohighlight">
+\[h(x)
+=
+(f\circ g)(x)
+=
+2(1 + x^3)^2
+=
+2 + 4x^3 + 2x^6
+\]</div>
+<p>This is implemented in the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code> as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_poly_composite</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">second_poly_composite</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">first_poly_composite</span><span class="o">.</span><span class="n">composeWith</span><span class="p">(</span><span class="n">second_poly_composite</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0x^0 + 4.0x^3 + 2.0x^6 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="calculus">
+<h2>Calculus<a class="headerlink" href="#calculus" title="Permalink to this headline">¶</a></h2>
+<section id="differentiation">
+<h3>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">¶</a></h3>
+<p>A <em>monomial</em> is a particularly simple kind of polynomial - a polynomial with one term. Accordingly, any monomial in one variable is of the form</p>
+<div class="math notranslate nohighlight">
+\[ax^i
+\]</div>
+<p>for scalar <span class="math notranslate nohighlight">\(a\)</span> and degree <span class="math notranslate nohighlight">\(i\)</span>. Polynomials are, evidently, finite sums of monomials. Differentiation is a linear operator so in order to differentiate polynomials it suffices know how to differentiate monomials. An exercise in applying Newton’s quotient definition of differentiation yields,</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx} (ax^i) = iax^{i-1}.
+\]</div>
+<p>Observe that the derivative of a monomial is again a monimial. Hence, the derivative of polynomials are polynomials. This justifies implementing differentiation as a method in the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. It is implemented as <code class="docutils literal notranslate"><span class="pre">diff()</span></code>. For the following polynomial,</p>
+<div class="math notranslate nohighlight">
+\[f(x) = -3 + 4x^2 + x^5
+\]</div>
+<p>its derivative is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly_to_diff</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">poly_to_diff</span><span class="o">.</span><span class="n">diff</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8x^1 + 5x^4 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="higher-order-differentiation">
+<h4>Higher order differentiation<a class="headerlink" href="#higher-order-differentiation" title="Permalink to this headline">¶</a></h4>
+<p>Differentiation preserves the class of polynomials, in the sense that the derivative operator on a polynomial returns a polynomial. As such it makes sense to use <code class="docutils literal notranslate"><span class="pre">diff()</span></code> to recursively define differeniation to any specified order. In <code class="docutils literal notranslate"><span class="pre">Poly</span></code> this is implemented as the method <code class="docutils literal notranslate"><span class="pre">Hdiff()</span></code> which passes an integer <span class="math notranslate nohighlight">\(n\)</span> and returns the <span class="math notranslate nohighlight">\(n\)</span>-order derivative operator <span class="math notranslate nohighlight">\(d^n/dx^n\)</span>.</p>
+<p>On the polynomial <span class="math notranslate nohighlight">\(f(x) = -3 + 4x^2 + x^5\)</span> we can readily print derivatives of any order. Derivatives of <span class="math notranslate nohighlight">\(f(x)\)</span> up to <span class="math notranslate nohighlight">\(7\)</span>-th order are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">-th derivative of </span><span class="si">{</span><span class="n">poly_to_diff</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">poly_to_diff</span><span class="o">.</span><span class="n">Hdiff</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The 0-th derivative of -3x^0 + 4x^2 + 1x^5  is: -3x^0 + 4x^2 + 1x^5 
+The 1-th derivative of -3x^0 + 4x^2 + 1x^5  is: 8x^1 + 5x^4 
+The 2-th derivative of -3x^0 + 4x^2 + 1x^5  is: 8x^0 + 20x^3 
+The 3-th derivative of -3x^0 + 4x^2 + 1x^5  is: 60x^2 
+The 4-th derivative of -3x^0 + 4x^2 + 1x^5  is: 120x^1 
+The 5-th derivative of -3x^0 + 4x^2 + 1x^5  is: 120x^0 
+The 6-th derivative of -3x^0 + 4x^2 + 1x^5  is: The zero polynomial.
+The 7-th derivative of -3x^0 + 4x^2 + 1x^5  is: The zero polynomial.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="integration">
+<h3>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h3>
+<p>Like differentiation, (indefinite) integration of monomials are monimials. For the monimial <span class="math notranslate nohighlight">\(ax^i\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\int ax^idx
+=
+\frac{a}{i+1}x^{i+1}.
+\]</div>
+<p>By linearity then, integration of polynomials are polynomials. Integration is implemented by the <code class="docutils literal notranslate"><span class="pre">intgr()</span></code> method in <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. For the following polynomial,</p>
+<div class="math notranslate nohighlight">
+\[f(x) = 5 - 3 x^4
+\]</div>
+<p>its integral is implemented as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">to_intgr</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The (indefinite) integral of </span><span class="si">{</span><span class="n">to_intgr</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">to_intgr</span><span class="o">.</span><span class="n">intgr</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The (indefinite) integral of 5x^0 - 3x^4  is: 5.0x^1 - 0.6x^5 
+</pre></div>
+</div>
+</div>
+</div>
+<p>The derivative of the integral of a function is the original function. And so as a consistency check on our integrated function <span class="math notranslate nohighlight">\(f(x)\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrated</span> <span class="o">=</span> <span class="n">to_intgr</span><span class="o">.</span><span class="n">intgr</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The derivative of the integral of </span><span class="si">{</span><span class="n">to_intgr</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">integrated</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The derivative of the integral of 5x^0 - 3x^4  is: 5.0x^0 - 3.0x^4 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="higher-order-integration">
+<h4>Higher order integration<a class="headerlink" href="#higher-order-integration" title="Permalink to this headline">¶</a></h4>
+<p>Since integration returns polynomials, it is possible to iteratively define integration of any order, much like differentiation. Higher order integration is implemented through the method <code class="docutils literal notranslate"><span class="pre">Hintgr()</span></code>. This method passes in an integer and returns an integral to that order.</p>
+<p>On our function <span class="math notranslate nohighlight">\(f(x) = 5 - 3x^4\)</span> above, its integral to <span class="math notranslate nohighlight">\(5\)</span> orders is implemented and printed below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The integral of </span><span class="si">{</span><span class="n">to_intgr</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">-th order is: </span><span class="si">{</span><span class="n">to_intgr</span><span class="o">.</span><span class="n">Hintgr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The integral of 5x^0 - 3x^4  to 0-th order is: 5x^0 - 3x^4 
+The integral of 5x^0 - 3x^4  to 1-th order is: 5.0x^1 - 0.6x^5 
+The integral of 5x^0 - 3x^4  to 2-th order is: 2.5x^2 - 0.1x^6 
+The integral of 5x^0 - 3x^4  to 3-th order is: 0.8333x^3 - 0.0143x^7 
+The integral of 5x^0 - 3x^4  to 4-th order is: 0.2083x^4 - 0.0018x^8 
+The integral of 5x^0 - 3x^4  to 5-th order is: 0.0417x^5 - 0.0002x^9 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inspection of <code class="docutils literal notranslate"><span class="pre">__str__</span></code> shows, in the print statement, that the coefficients are printed to four significant figures. To change this, change the entry <code class="docutils literal notranslate"><span class="pre">sig_figures</span></code> accordingly.</p>
+</div>
+</section>
+<section id="area-under-the-curve">
+<h4>Area under the curve<a class="headerlink" href="#area-under-the-curve" title="Permalink to this headline">¶</a></h4>
+<p>The fundamental theorem of calculus for functions of one variable states: that for an integrable function <span class="math notranslate nohighlight">\(f(x)\)</span> and a range <span class="math notranslate nohighlight">\([a, b]\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\int_{[a, b]} f(x)dx = (\int f(x)dx)(b) - (\int f(x) dx)(a)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\int f(x) dx\)</span> is the indefinite integral of <span class="math notranslate nohighlight">\(f\)</span>. Calling the method <code class="docutils literal notranslate"><span class="pre">AreaUnder()</span></code> on any <code class="docutils literal notranslate"><span class="pre">Poly</span></code> instance and passing in a range <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code> returns the area bounded by the polynomial <span class="math notranslate nohighlight">\(f(x)\)</span>, the <span class="math notranslate nohighlight">\(x\)</span>-axis and vertical lines at <span class="math notranslate nohighlight">\(x = a\)</span> and <span class="math notranslate nohighlight">\(a = b\)</span>.</p>
+<p>To illustrate, the area under <span class="math notranslate nohighlight">\(f(x) = 3x^4\)</span> between the range <span class="math notranslate nohighlight">\([-1, 4]\)</span> is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly_area</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">poly_area</span><span class="o">.</span><span class="n">AreaUnder</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>615.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="greatest-common-divisor">
+<h2>Greatest common divisor<a class="headerlink" href="#greatest-common-divisor" title="Permalink to this headline">¶</a></h2>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<p>As with integers, for two polynomials <span class="math notranslate nohighlight">\(f, g\)</span> there is always a common divisor, namely the unit polynomial <span class="math notranslate nohighlight">\(1\)</span>. In further similarity, it is possible to find larger common divisors. Recall that a polynomial <span class="math notranslate nohighlight">\(h\)</span> <em>divides</em> <span class="math notranslate nohighlight">\(f\)</span> if, in the polynomial long division <span class="math notranslate nohighlight">\(f/h\)</span>, the remainder is the zero polynomial. Euclid’s famous algorithm for finding the greatest common divisor for two integers can be adapted straightforwardly for finding the greatest common divisor for two univariate polynomials.</p>
+<p>We decribe the algorithm in what follows. Let <span class="math notranslate nohighlight">\(f, g\)</span> be two univariate polynomials. Suppose that <span class="math notranslate nohighlight">\(\deg f \geq \deg g\)</span>. Then the polynomial long division states that there exist polynomials <span class="math notranslate nohighlight">\((f_1, f_2)\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[f = gf_1 + f_2
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(\deg f_2 &lt; \deg g\)</span>. Here <span class="math notranslate nohighlight">\(f_2\)</span> is the remainder in the division <span class="math notranslate nohighlight">\(f/g\)</span>.</p>
+<p>Remember, we want to find the greatest <em>common</em> divisor of <span class="math notranslate nohighlight">\(f, g\)</span> which means a polynomial <span class="math notranslate nohighlight">\(h\)</span> which divides both <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>. Now, in the case <span class="math notranslate nohighlight">\(f_2 = 0\)</span> above, the remainder of <span class="math notranslate nohighlight">\(f/g\)</span> is zero. Hence <span class="math notranslate nohighlight">\(f = gf_1\)</span>. Since <span class="math notranslate nohighlight">\(f_1\)</span> is polynomial, it follows that <span class="math notranslate nohighlight">\(f\)</span> is divisible by <span class="math notranslate nohighlight">\(g\)</span>. Now, <span class="math notranslate nohighlight">\(g\)</span> is also divisible by <span class="math notranslate nohighlight">\(g\)</span> so therefore the greatest common divisor will be the denominator <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p>In the case <span class="math notranslate nohighlight">\(f_2\)</span> is <em>not</em> the zero polynomial, we need to check divisibility for <span class="math notranslate nohighlight">\(g\)</span>. Now in order for <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> to have a common divisor, note that it is equivalent for <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(f_2\)</span> to have a common divisor. Since <span class="math notranslate nohighlight">\(\deg f_2 &lt; \deg g\)</span> we can divide <span class="math notranslate nohighlight">\(g\)</span> by <span class="math notranslate nohighlight">\(f_2\)</span> to get the next relation,</p>
+<div class="math notranslate nohighlight">
+\[g = f_2 g_1 + g_2
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(g_2\)</span> the remainder of <span class="math notranslate nohighlight">\(g/f_2\)</span>. If <span class="math notranslate nohighlight">\(g_2\)</span> now is the zero polynomial, we find that <span class="math notranslate nohighlight">\(g\)</span> is divisible by <span class="math notranslate nohighlight">\(f_2\)</span>. Consequently, with <span class="math notranslate nohighlight">\(f = gf_1 + f_2\)</span>, this means <span class="math notranslate nohighlight">\(f\)</span> will also be divisible by <span class="math notranslate nohighlight">\(f_2\)</span>. Hence that <span class="math notranslate nohighlight">\(f_2\)</span> will be the greatest common divisor.</p>
+<p>If <span class="math notranslate nohighlight">\(g_2\)</span> is <em>not</em> the zero polynomial, we can repeat this process now for the pair of remainders <span class="math notranslate nohighlight">\(f_2, g_2\)</span> noting that <span class="math notranslate nohighlight">\(\gcd(f, g) = \gcd(f_2, g_2)\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This algorithm will terminate since the degrees of <span class="math notranslate nohighlight">\(f_2, g_2\)</span> are less than the original polynomials <span class="math notranslate nohighlight">\(f, g\)</span>. That is, with <span class="math notranslate nohighlight">\(\deg g \leq \deg f\)</span> we will eventually arrive at a base case, which is the case where <span class="math notranslate nohighlight">\(g\)</span> is a linear form (a polynomial of degree <em>one</em>).</p>
+</div>
+</section>
+<section id="id1">
+<h3>Implementation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Euclid’s algoritm for finding the greatest common divisor of two polynomial is callable through the method <code class="docutils literal notranslate"><span class="pre">gcd()</span></code> on any instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. As an illustration, let <span class="math notranslate nohighlight">\(f(x) = 1 + 2x + x^2\)</span> and <span class="math notranslate nohighlight">\(g(x) = x+1\)</span>. Their greatest common divisor is then:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_divisor_1</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">find_divisor_2</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">find_divisor_1</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">find_divisor_2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1x^0 + 1x^1 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Indeed, in this example <span class="math notranslate nohighlight">\(f(x) = 1 + 2x + x^2 = (1 + x)^2\)</span>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ratnl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Rational functions (basics)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kowshik Bettadapura<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

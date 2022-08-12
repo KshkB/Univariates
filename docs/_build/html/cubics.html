@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The cubics &#8212; Univariate polynomials and rational functions</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quartics" href="quartics.html" />
+    <link rel="prev" title="Quadratic univariates" href="quadratics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/smfld.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Univariate polynomials and rational functions</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="poly.html">
+   Polynomials (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ratnl.html">
+   Rational functions (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cplxnum.html">
+   Complex numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discriminant.html">
+   The discriminant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quadratics.html">
+   Quadratic univariates
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   The cubics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quartics.html">
+   Quartics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/cubics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcubics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/cubics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-import">
+   Library import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-initialisation">
+     Pre-initialisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation">
+     Initialisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cubic-depression">
+   Cubic depression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminaries">
+     Preliminaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeroes">
+   Zeroes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#utility-of-depression">
+       Utility of depression
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The cubics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-import">
+   Library import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-initialisation">
+     Pre-initialisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation">
+     Initialisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cubic-depression">
+   Cubic depression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminaries">
+     Preliminaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeroes">
+   Zeroes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#utility-of-depression">
+       Utility of depression
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="the-cubics">
+<h1>The cubics<a class="headerlink" href="#the-cubics" title="Permalink to this headline">¶</a></h1>
+<p>Polynomials of degree three are referred to as <em>cubics</em>. In one variable, cubic univariates. They are generically of the form</p>
+<div class="math notranslate nohighlight">
+\[f(x) = d + cx + bx^2 + ax^3
+\]</div>
+<p>for <span class="math notranslate nohighlight">\(a\neq0\)</span>. As with the quadratics, cubic polynomials are polynomials. They are coded in the module <code class="docutils literal notranslate"><span class="pre">cubics.py</span></code> as a subclass of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>.</p>
+<section id="library-import">
+<h2>Library import<a class="headerlink" href="#library-import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">class_scripts</span> <span class="kn">import</span> <span class="n">cubics</span> <span class="k">as</span> <span class="n">cbc</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<section id="pre-initialisation">
+<h3>Pre-initialisation<a class="headerlink" href="#pre-initialisation" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">__new__</span></code> method is run before initialisation and verifies whether a given array is indeed a member of the class <code class="docutils literal notranslate"><span class="pre">Cubic</span></code>. Recall, it will be a cubic if it has degree <em>three</em> with non-zero leading term. The following two instances are <em>not cubic</em>, as detected by <code class="docutils literal notranslate"><span class="pre">__new__</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cbc_test_1</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">cbc_test_2</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">cbc_test_3</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cbc_test_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cbc_test_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cbc_test_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not a cubic
+Not a cubic
+Not a cubic
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="initialisation">
+<h3>Initialisation<a class="headerlink" href="#initialisation" title="Permalink to this headline">¶</a></h3>
+<p>For an honest cubic <span class="math notranslate nohighlight">\(f(x) = d + cx + bx^2 + ax^3\)</span>, it comes with all the attributes of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. Furthermore, as with quadratics, it is much faster to calculate its discriminant from the coefficients passed rather than first calculating its resultant.</p>
+<p>To illustrate, on the cubic <span class="math notranslate nohighlight">\(f(x) = -3 + 5x + x^2 -12x^3\)</span>, when initialised it has attribues:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cbc_1</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The cubic polynomials is: </span><span class="si">{</span><span class="n">cbc_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Its coefficient list is: </span><span class="si">{</span><span class="n">cbc_1</span><span class="o">.</span><span class="n">coeffs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The degree of the cubic is: </span><span class="si">{</span><span class="n">cbc_1</span><span class="o">.</span><span class="n">degree</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Its discriminant is: </span><span class="si">{</span><span class="n">cbc_1</span><span class="o">.</span><span class="n">disc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The cubic polynomials is: -3x^0 + 5x^1 + 1x^2 - 12x^3 
+Its coefficient list is: [-3, 5, 1, -12]
+The degree of the cubic is: 3
+Its discriminant is: -25715
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a check, to see that its discriminant coincides with the discrinimant call <code class="docutils literal notranslate"><span class="pre">discriminant()</span></code> when viewed as an instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>, see that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cbc_1</span><span class="o">.</span><span class="n">discriminant</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-25715.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="cubic-depression">
+<h2>Cubic depression<a class="headerlink" href="#cubic-depression" title="Permalink to this headline">¶</a></h2>
+<section id="preliminaries">
+<h3>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h3>
+<p>An important transformation for cubics is the <em>depression</em>. A <em>depressed cubic</em> <span class="math notranslate nohighlight">\(g(x)\)</span> is a cubic of the form <span class="math notranslate nohighlight">\(g(x) = q + px + x^3\)</span> for coefficients <span class="math notranslate nohighlight">\(p, q\)</span>. From the <a class="reference external" href="https://en.wikipedia.org/wiki/Cubic_equation#Depressed_cubic">Wikipedia entry</a>, <em>any</em> cubic can be transformed into depressed form.</p>
+<p>For a general cubic <span class="math notranslate nohighlight">\(f(x) = d + cx + bx^2 + ax^3\)</span>, recall that we know <span class="math notranslate nohighlight">\(a\neq0\)</span>. As such we can divide through by the leading coefficient <span class="math notranslate nohighlight">\(a\)</span> without cause for heart palpatations. The transformation <span class="math notranslate nohighlight">\(x \mapsto x - \frac{b}{3a}\)</span> will send <span class="math notranslate nohighlight">\(f\)</span> to the form <span class="math notranslate nohighlight">\(\tilde f(x) = aq + apx + ax^3\)</span>. Dividing through by <span class="math notranslate nohighlight">\(a\)</span> gives the depressed cubic <span class="math notranslate nohighlight">\(g(x) = q + px + x^3\)</span>. The new coefficients <span class="math notranslate nohighlight">\((p, q)\)</span> can be expressed in terms of the old coefficients <span class="math notranslate nohighlight">\((a, b, c, d)\)</span> thusly,</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+p
+=
+\frac{3ac - b^2}{3a^2}
+&amp;&amp;
+\mbox{and}
+&amp;&amp;
+q 
+=
+\frac{2b^3 - 9abc + 27 a^2d}{27 a^3}.
+\end{align}
+\]</div>
+</section>
+<section id="implementation">
+<h3>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<p>In the class <code class="docutils literal notranslate"><span class="pre">Cubic</span></code>, the method <code class="docutils literal notranslate"><span class="pre">toDepressed()</span></code> takes any instance of <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> and, through the above formula for the coefficients, returns its depression which is another instance of <code class="docutils literal notranslate"><span class="pre">Cubic</span></code>. To illustrate, consider the cubic,</p>
+<div class="math notranslate nohighlight">
+\[f(x) = 1 + 7x - 3x^3 + 2x^3
+\]</div>
+<p>Its depression is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">undepressed</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">undepressed</span><span class="o">.</span><span class="n">toDepressed</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0x^0 + 2.75x^1 + 1x^3 
+</pre></div>
+</div>
+</div>
+</div>
+<p>We obtained the above cubic by applying the formula. It is also possible to recover it through composing it with the transformation <span class="math notranslate nohighlight">\(x \mapsto x - \frac{b}{3a}\)</span> and dividing the resulting polynomial by <span class="math notranslate nohighlight">\(a\)</span>. This can be implemented through the <code class="docutils literal notranslate"><span class="pre">composeWith()</span></code> method callable on any instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. In doing so:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">leading_coeff</span> <span class="o">=</span> <span class="n">undepressed</span><span class="o">.</span><span class="n">coeff</span><span class="p">(</span><span class="n">undepressed</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
+<span class="n">coeff_b</span> <span class="o">=</span> <span class="n">undepressed</span><span class="o">.</span><span class="n">coeff</span><span class="p">(</span><span class="n">undepressed</span><span class="o">.</span><span class="n">degree</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">composite</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="n">coeff_b</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">leading_coeff</span><span class="p">),</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">factor</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">leading_coeff</span><span class="p">])</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">factor</span> <span class="o">*</span> <span class="n">undepressed</span><span class="o">.</span><span class="n">composeWith</span><span class="p">(</span><span class="n">composite</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0x^0 + 2.75x^1 + 1.0x^3 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="zeroes">
+<h2>Zeroes<a class="headerlink" href="#zeroes" title="Permalink to this headline">¶</a></h2>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<p>A <em>root</em> of a cubic univariate <span class="math notranslate nohighlight">\(f(x) = d + cx + bx^2 + ax^3\)</span> is a value <span class="math notranslate nohighlight">\(x_0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[f(x_0) = 0.
+\]</div>
+<p>The problem of expressing roots of a cubic univariate in terms of its coefficients and radicals, in a manner analogous to the case of quadratic univariates, is a classical problem in the history of mathematics. Over the complex numbers, there will always exist three roots of <span class="math notranslate nohighlight">\(f\)</span>, counted with multiplicity.</p>
+<section id="utility-of-depression">
+<h4>Utility of depression<a class="headerlink" href="#utility-of-depression" title="Permalink to this headline">¶</a></h4>
+<p>Recall that any cubic can be transformed into a much simpler cubic, name its depression. The problem of finding roots of the cubic can therefore be reduced to finding roots of its depression, which is significantly easier. Since we know the transformation <span class="math notranslate nohighlight">\(x \mapsto x - \frac{b}{3a}\)</span> sends the original cubic <span class="math notranslate nohighlight">\(f\)</span> to (a multiple of) its depressed form, we can therefore obtain the root of <span class="math notranslate nohighlight">\(f\)</span> by simply translating back any root of its depressed form. More explicitly, if <span class="math notranslate nohighlight">\(x_{depr}\)</span> is a root of the depressed form of <span class="math notranslate nohighlight">\(f\)</span>, then the translate <span class="math notranslate nohighlight">\(x_{depr} + \frac{b}{3a}\)</span> will be a root of <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>For any (real) depressed cubic <span class="math notranslate nohighlight">\(g(x) = q + px + x^3\)</span> with <em>negative discriminant</em> Cardano famously obtained a formula for one of the roots in terms of the coefficients <span class="math notranslate nohighlight">\(p, q\)</span> and their radicals (specifically, square- and cube-roots).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Recall that it suffices to find only one root. The others can be obtained on multiplying by an appropriate root of unity. Once we have three roots we know, by the fundamental theorem of algebra, that we have found <em>all</em> the roots. With Cardano’s formula and a cube root of unity it is possible to derive all the roots of a cubic.</p>
+</div>
+<p>See <a class="reference external" href="https://en.wikipedia.org/wiki/Cubic_equation#General_cubic_formula">this Wikipedia entry</a> for the general formula for roots of a cubic.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The formula from the above entry is valid in the same generality as in the quadratic case, i.e., for <em>complex</em> cubics, not just real cubics.</p>
+</div>
+</section>
+</section>
+<section id="id1">
+<h3>Implementation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The method <code class="docutils literal notranslate"><span class="pre">zeroes()</span></code> is callable on instances of the class <code class="docutils literal notranslate"><span class="pre">Cubic</span></code>. When called on an instance it returns a list of its zeroes. To illustrate, for the following cubics:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(-10 + x + 5x^3\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(x -9x^2 + x^3\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(-34 + 6x^2 + 2x^3\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 + x + x^2 + x^3\)</span></p></li>
+</ul>
+<p>Their zeroes are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_cubic_1</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">test_cubic_2</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">test_cubic_3</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="o">-</span><span class="mi">34</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">test_cubic_4</span> <span class="o">=</span> <span class="n">cbc</span><span class="o">.</span><span class="n">Cubic</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">test_cubics</span> <span class="o">=</span> <span class="p">[</span><span class="n">test_cubic_1</span><span class="p">,</span> <span class="n">test_cubic_2</span><span class="p">,</span> <span class="n">test_cubic_3</span><span class="p">,</span> <span class="n">test_cubic_4</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">test_cubics</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Zeroes of </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> are:&quot;</span><span class="p">)</span>
+    <span class="n">c_zros</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">zeroes</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">c_zros</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Zeroes of -10x^0 + 1x^1 + 5x^3  are:
+1.207 + 0.0i
+-0.6035 + 1.137i
+-0.6035 - 1.137i
+
+
+Zeroes of 1x^1 - 9x^2 + 1x^3  are:
+0.0 + 0.0i
+0.1125 + -0.0i
+8.8875 + 0.0i
+
+
+Zeroes of -34x^0 + 6x^2 + 2x^3  are:
+-2.4343 + 1.7809i
+-2.4343 - 1.7809i
+1.8686 + 0.0i
+
+
+Zeroes of 1x^0 + 1x^1 + 1x^2 + 1x^3  are:
+-1.0 + 0.0i
+0.0 + 1.0i
+-0.0 - 1.0i
+</pre></div>
+</div>
+</div>
+</div>
+<p>The value of the cubic at each zero must of course be zero.</p>
+<p>And so, as a sanity check on the method <code class="docutils literal notranslate"><span class="pre">zeroes()</span></code> we need to check, for each cubic in <code class="docutils literal notranslate"><span class="pre">test_cubics</span></code> above, that the cubic at that value is indeed zero. As the method <code class="docutils literal notranslate"><span class="pre">zeroes()</span></code> returns complex numbers, i.e., instances of <code class="docutils literal notranslate"><span class="pre">cplx</span></code>, to evaluate a polynomial thereon requires calling <code class="docutils literal notranslate"><span class="pre">cplxEval()</span></code> from <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. We find:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">test_cubics</span><span class="p">:</span>
+    <span class="n">c_zros</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">zeroes</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">zro</span> <span class="ow">in</span> <span class="n">c_zros</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">cplxEval</span><span class="p">(</span><span class="n">zro</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.0 + 0.0i
+-0.0 + 0.0i
+-0.0 + 0.0i
+
+
+0.0 + 0.0i
+0.0 + 0.0i
+0.0 + 0.0i
+
+
+-0.0 + 0.0i
+-0.0 + 0.0i
+-0.0 + 0.0i
+
+
+0.0 + 0.0i
+0.0 + 0.0i
+0.0 + 0.0i
+</pre></div>
+</div>
+</div>
+</div>
+<p>And so for each cubic in <code class="docutils literal notranslate"><span class="pre">test_cubics</span></code>, each of their zeroes indeed returns zero upon evaluation, as expected.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="quadratics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Quadratic univariates</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="quartics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Quartics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kowshik Bettadapura<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

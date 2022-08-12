@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Complex numbers &#8212; Univariate polynomials and rational functions</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The discriminant" href="discriminant.html" />
+    <link rel="prev" title="Rational functions (basics)" href="ratnl.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/smfld.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Univariate polynomials and rational functions</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="poly.html">
+   Polynomials (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ratnl.html">
+   Rational functions (basics)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Complex numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discriminant.html">
+   The discriminant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quadratics.html">
+   Quadratic univariates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cubics.html">
+   The cubics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quartics.html">
+   Quartics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/cplxnum.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcplxnum.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/cplxnum.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libary-import">
+   Libary import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complex-number-generator">
+     Complex number generator
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic">
+   Arithmetic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integer-powers">
+     Integer powers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-representation">
+   Matrix representation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminaries">
+     Preliminaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recovering-attributes">
+     Recovering attributes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polar-coordinates">
+   Polar coordinates
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polar-transformation">
+     Polar transformation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fractional-powers">
+   Fractional powers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Preliminaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Implementation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roots-of-unity">
+     Roots of unity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-application">
+     Further application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluation">
+   Evaluation
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Complex numbers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libary-import">
+   Libary import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complex-number-generator">
+     Complex number generator
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic">
+   Arithmetic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integer-powers">
+     Integer powers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-representation">
+   Matrix representation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminaries">
+     Preliminaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recovering-attributes">
+     Recovering attributes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polar-coordinates">
+   Polar coordinates
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polar-transformation">
+     Polar transformation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fractional-powers">
+   Fractional powers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Preliminaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Implementation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roots-of-unity">
+     Roots of unity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-application">
+     Further application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluation">
+   Evaluation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="complex-numbers">
+<h1>Complex numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h1>
+<p>Like the real numbers, complex numbers form what is known as a <em>field</em>. This means all the familiar properties of real numbers such as addition, multiplication and division adapt straightforwardly to complex numbers. In the complex number system there is a very special number called the <em>complex unit</em>. It is denoted <span class="math notranslate nohighlight">\(i\)</span> and it satisfies the curious formula,</p>
+<div class="math notranslate nohighlight">
+\[i^2 = -1.
+\]</div>
+<p>Evidently, <span class="math notranslate nohighlight">\(i\)</span> cannot be any real number. A <em>complex number</em> <span class="math notranslate nohighlight">\(z\)</span> is always of the form</p>
+<div class="math notranslate nohighlight">
+\[z = x + yi
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are real numbers. Here <span class="math notranslate nohighlight">\(x\)</span> is the <em>real part</em> of <span class="math notranslate nohighlight">\(z\)</span> while <span class="math notranslate nohighlight">\(y\)</span> is the <em>imaginary part</em>. Complex numbers are a combination of their real and imaginary parts.</p>
+<section id="libary-import">
+<h2>Libary import<a class="headerlink" href="#libary-import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">class_scripts</span> <span class="kn">import</span> <span class="n">cplxnums</span> <span class="k">as</span> <span class="n">cx</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">cplxnums.py</span></code> we have the class <code class="docutils literal notranslate"><span class="pre">cplx</span></code>. Instances of <code class="docutils literal notranslate"><span class="pre">cplx</span></code> are complex numbers. Below are attributes of this class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">cx</span><span class="o">.</span><span class="n">cplx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class cplx in module class_scripts.cplxnums:
+
+class cplx(builtins.object)
+ |  cplx(coeffs)
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, other)
+ |  
+ |  __init__(self, coeffs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __mul__(self, other)
+ |  
+ |  __pow__(self, n)
+ |  
+ |  __repr__(self)
+ |      Return repr(self).
+ |  
+ |  __str__(self)
+ |      Return str(self).
+ |  
+ |  __sub__(self, other)
+ |  
+ |  __truediv__(self, other)
+ |  
+ |  mtrx(self)
+ |  
+ |  toPolar(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(cls, coeffs)
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  cplx_unit = [0, 1]
+ |  
+ |  significant_figures = 4
+</pre></div>
+</div>
+</div>
+</div>
+<p>The class <code class="docutils literal notranslate"><span class="pre">cplx</span></code> passes arrays of length two, <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">y]</span></code>. The first entry <code class="docutils literal notranslate"><span class="pre">x</span></code> is the real part and second entry <code class="docutils literal notranslate"><span class="pre">y</span></code> is the imaginary part. When initialised, any complex number comes with these defining properties and its <em>norm-squared</em>, which is <span class="math notranslate nohighlight">\(x^2 + y^2\)</span>.</p>
+<p>For the complex unit <span class="math notranslate nohighlight">\(i\)</span>, its real part is <code class="docutils literal notranslate"><span class="pre">0</span></code> and imaginary part is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Its attrubutes are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cplx_unit</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cplx</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The real part of </span><span class="si">{</span><span class="n">cplx_unit</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">cplx_unit</span><span class="o">.</span><span class="n">re</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The imaginary part of </span><span class="si">{</span><span class="n">cplx_unit</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">cplx_unit</span><span class="o">.</span><span class="n">im</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The norm squared of </span><span class="si">{</span><span class="n">cplx_unit</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">cplx_unit</span><span class="o">.</span><span class="n">normsq</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The real part of 0 + 1i is 0
+The imaginary part of 0 + 1i is 1
+The norm squared of 0 + 1i is 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that we have <em>printed</em> the complex unit above as <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">1i</span></code>. This is due to our modification of <code class="docutils literal notranslate"><span class="pre">__str__</span></code>. In raw form, the complex unit is represented as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">cplx_unit</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cplx([0, 1])
+</pre></div>
+</div>
+</div>
+</div>
+<section id="complex-number-generator">
+<h3>Complex number generator<a class="headerlink" href="#complex-number-generator" title="Permalink to this headline">¶</a></h3>
+<p>The following code generates instances of complex numbers with integral real and imaginary parts. It passes in <code class="docutils literal notranslate"><span class="pre">amt</span></code>, the amount of complex numbers to generate and <code class="docutils literal notranslate"><span class="pre">rng</span></code>, the integer range to sample for real and imaginary parts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="k">def</span> <span class="nf">generateCplx</span><span class="p">(</span><span class="n">amt</span><span class="p">,</span> <span class="n">rng</span><span class="p">):</span>
+    <span class="n">cplx_nums</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">amt</span><span class="p">):</span>
+        <span class="n">re</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="n">rng</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rng</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="n">rng</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rng</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">cplx_nums</span> <span class="o">+=</span> <span class="p">[</span><span class="n">cx</span><span class="o">.</span><span class="n">cplx</span><span class="p">([</span><span class="n">re</span><span class="p">,</span> <span class="n">im</span><span class="p">])]</span>
+        
+    <span class="k">return</span> <span class="n">cplx_nums</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Below is a list of <code class="docutils literal notranslate"><span class="pre">10</span></code> complex numbers with integral real and imaginary parts between <code class="docutils literal notranslate"><span class="pre">-10</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code>. Their norm-squared is printed alonside.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amt</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+
+<span class="n">cplx_num_lst</span> <span class="o">=</span> <span class="n">generateCplx</span><span class="p">(</span><span class="n">amt</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">cplx_num_lst</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;For </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> its norm-squared is </span><span class="si">{</span><span class="n">num</span><span class="o">.</span><span class="n">normsq</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>For 2 + 0i its norm-squared is 4
+For 9 + 4i its norm-squared is 97
+For -2 - 4.0i its norm-squared is 20
+For -7 - 3.0i its norm-squared is 58
+For 2 + 1i its norm-squared is 5
+For -8 - 2.0i its norm-squared is 68
+For -6 - 6.0i its norm-squared is 72
+For -2 - 8.0i its norm-squared is 68
+For -1 - 2.0i its norm-squared is 5
+For 3 + 5i its norm-squared is 34
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="arithmetic">
+<h2>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this headline">¶</a></h2>
+<p>Complex numbers can be added, multiplied, subtracted and divided. Modifying the relevant the dunders allows for adapting <code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">*,</span> <span class="pre">-,</span> <span class="pre">/</span></code> to instances of <code class="docutils literal notranslate"><span class="pre">cplx</span></code>. To illustrate, for the following two complex numbers</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+z_1 = -2 + 4i
+&amp;&amp;
+\mbox{and}
+&amp;&amp;
+z_2 = 4 - i
+\end{align}
+\]</div>
+<p>we will return:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(z_1 + z_2\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_1 - z_2\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_1 \cdot z_2\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_1/z_2\)</span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cplx_1</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cplx</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">cplx_2</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cplx</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cplx_1</span> <span class="o">+</span> <span class="n">cplx_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cplx_1</span> <span class="o">-</span> <span class="n">cplx_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cplx_1</span> <span class="o">*</span> <span class="n">cplx_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cplx_1</span> <span class="o">/</span> <span class="n">cplx_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 + 3i
+-6.0 + 5.0i
+-4.0 + 18.0i
+-0.7059 + 0.8235i
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Decimal places are reported to <code class="docutils literal notranslate"><span class="pre">4</span></code> significant figures.</p>
+</div>
+<section id="integer-powers">
+<h3>Integer powers<a class="headerlink" href="#integer-powers" title="Permalink to this headline">¶</a></h3>
+<p>With multiplication comes power. The dunder <code class="docutils literal notranslate"><span class="pre">__pow__</span></code> allows for adapting <code class="docutils literal notranslate"><span class="pre">**</span></code> to instances of <code class="docutils literal notranslate"><span class="pre">cplx</span></code>. As an illustration, below are the first <code class="docutils literal notranslate"><span class="pre">5</span></code> powers of the complex unit <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">-th power of </span><span class="si">{</span><span class="n">cplx_unit</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">cplx_unit</span><span class="o">**</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The 0-th power of 0 + 1i is: 1 + 0i
+The 1-th power of 0 + 1i is: 0 + 1i
+The 2-th power of 0 + 1i is: -1.0 + 0.0i
+The 3-th power of 0 + 1i is: 0.0 - 1.0i
+The 4-th power of 0 + 1i is: 1.0 + 0.0i
+The 5-th power of 0 + 1i is: 0.0 + 1.0i
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="matrix-representation">
+<h2>Matrix representation<a class="headerlink" href="#matrix-representation" title="Permalink to this headline">¶</a></h2>
+<section id="preliminaries">
+<h3>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to study complex numbers without ever mentioning the complex unit <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span> and instead only considering real numbers. But what we gain in doing so is conceded by having to deal with matrices.</p>
+<p>To see why matrices are relevant, recall that any complex number <span class="math notranslate nohighlight">\(z\)</span> is specified by two real numbers <span class="math notranslate nohighlight">\(x, y\)</span>. The correspondence <span class="math notranslate nohighlight">\(z \mapsto (x, y)\)</span> gives an <em>isomorphism</em> of sets <span class="math notranslate nohighlight">\(\mathbb C\cong \mathbb R^2\)</span>. As the complex numbers form a field we have the operation of multiplication <span class="math notranslate nohighlight">\(\mathbb C\times \mathbb C \rightarrow \mathbb C\)</span>. Equivalently (or rather, <em>dually</em>), any complex number <span class="math notranslate nohighlight">\(z\)</span> can be thought of via the multiplication <span class="math notranslate nohighlight">\(z : \lambda \mapsto \lambda \cdot z\)</span>. Hence any complex number is a transformation <span class="math notranslate nohighlight">\(\mathbb C \rightarrow \mathbb C\)</span>. Note that it is linear since <span class="math notranslate nohighlight">\(a\lambda \mapsto (a\lambda) z = a(\lambda z)\)</span>. Hence moreover, any complex number will be a <em>linear transformation</em>. Using that <span class="math notranslate nohighlight">\(\mathbb C\cong \mathbb R^2\)</span>, we deduce that any complex number can be thought of as a linear transformation <span class="math notranslate nohighlight">\(\mathbb R^2 \rightarrow \mathbb R^2\)</span>, i.e., as a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix.</p>
+<p>Explicitly, with <span class="math notranslate nohighlight">\(z = x + yi\)</span>, this <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix representation is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}z = x + yi \longleftrightarrow \left(\begin{array}{rr} x &amp; -y\\ y &amp; x\end{array}\right).
+\end{split}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(M(z)\)</span> denote the matrix representation of <span class="math notranslate nohighlight">\(z\)</span>. The unit <span class="math notranslate nohighlight">\(1\)</span> and complex unit <span class="math notranslate nohighlight">\(i\)</span> are represented respectively by,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+M(1)
+= 
+\left(\begin{array}{rr} 1 &amp; 0\\ 0 &amp; 1\end{array}\right)
+&amp;&amp;\mbox{and}&amp;&amp;
+M(i)
+=
+\left(\begin{array}{rr} 0 &amp; -1\\ 1 &amp; 0\end{array}\right).
+\end{align}
+\end{split}\]</div>
+<p>A straightforward calculation will show for two any complex numbers <span class="math notranslate nohighlight">\(z_1, z_2\)</span> that <span class="math notranslate nohighlight">\(M(z_1z_2) = M(z_1)M(z_2)\)</span>. Hence that <span class="math notranslate nohighlight">\(M : \mathbb C \rightarrow \mathrm{GL}_2(\mathbb R)\)</span> defines a <em>representation</em> of the complex number field <span class="math notranslate nohighlight">\(\mathbb C\)</span> on the group of <span class="math notranslate nohighlight">\(2\times 2\)</span>, real matrices.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The representation <span class="math notranslate nohighlight">\(\mathbb C \stackrel{M}{\rightarrow} \mathrm{GL}_2(\mathbb R)\)</span> is “faithful”, i.e., injective, since <span class="math notranslate nohighlight">\(M(z) = 0\)</span> if and only if <span class="math notranslate nohighlight">\(z = 0 + 0i\)</span>.</p>
+</div>
+</section>
+<section id="implementation">
+<h3>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<p>The class <code class="docutils literal notranslate"><span class="pre">cplx</span></code> in the module <code class="docutils literal notranslate"><span class="pre">cplxnum.py</span></code> contains the method <code class="docutils literal notranslate"><span class="pre">mtrx()</span></code>. Calling this on any instance of <code class="docutils literal notranslate"><span class="pre">cplx</span></code>, i.e., on any complex number <span class="math notranslate nohighlight">\(z\)</span>, returns its matrix representation <span class="math notranslate nohighlight">\(M(z)\)</span>. To illustrate, for the following complex numbers:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1 + 0i\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 + 1i\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(-3 + 5i\)</span></p></li>
+</ul>
+<p>their matrix representations are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unit</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cplx</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">cplx_unit</span> <span class="o">=</span> <span class="n">cplx_unit</span>
+<span class="n">cplx_3</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cplx</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+
+<span class="n">cplx_nums_to_rep</span> <span class="o">=</span> <span class="p">[</span><span class="n">unit</span><span class="p">,</span> <span class="n">cplx_unit</span><span class="p">,</span> <span class="n">cplx_3</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">cplx</span> <span class="ow">in</span> <span class="n">cplx_nums_to_rep</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cplx</span><span class="o">.</span><span class="n">mtrx</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 0]
+ [0 1]]
+[[ 0 -1]
+ [ 1  0]]
+[[-3 -5]
+ [ 5 -3]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For any instance of <code class="docutils literal notranslate"><span class="pre">cplx</span></code>, the matrix representation method <code class="docutils literal notranslate"><span class="pre">mtrx()</span></code> returns a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p>
+</div>
+</section>
+<section id="recovering-attributes">
+<h3>Recovering attributes<a class="headerlink" href="#recovering-attributes" title="Permalink to this headline">¶</a></h3>
+<p>From the matrix representation of a complex number <span class="math notranslate nohighlight">\(z\)</span>, its real and imaginary parts can be ontained as follows. Recall that the <em>trace</em> of a matrix is the sum of entries on its diagonal. Hence with <span class="math notranslate nohighlight">\(z = x + yi\)</span> see that <span class="math notranslate nohighlight">\(\mathrm{tr}~M(z) = 2x\)</span>. The real part of <span class="math notranslate nohighlight">\(z\)</span> is therefore <span class="math notranslate nohighlight">\(\frac{1}{2}\mathrm{tr}~M(z)\)</span>.</p>
+<p>As for the imaginary part it is necessary to first multiply by <span class="math notranslate nohighlight">\(-i\)</span>. This has the effect of rotating real and imaginary to imaginary and real. The imaginary part of <span class="math notranslate nohighlight">\(z\)</span> is therefore <span class="math notranslate nohighlight">\(\frac{1}{2}\mathrm{tr}~M(-zi)\)</span>. Since we know <span class="math notranslate nohighlight">\(M(z_1z_2) = M(z_1)M(z_2)\)</span>, we can obtain the imaginary part equivalently by <span class="math notranslate nohighlight">\(-\frac{1}{2} \mathrm{tr}(M(z)M(i))\)</span>.</p>
+<p>Concerning the norm squared attribute, it can be recovered as the determinant of the matrix representation. That is, if <span class="math notranslate nohighlight">\(\|z\|^2\)</span> denotes the norm-squared of the complex number <span class="math notranslate nohighlight">\(z\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[\|z\|^2 = \det M(z).
+\]</div>
+<p>This makes it clear that the length of a complex number can be related to an area spanned by real vectors in two dimensions. We leave it to the intrepid reader of these documents to test these claims using the class <code class="docutils literal notranslate"><span class="pre">cplx</span></code>.</p>
+</section>
+</section>
+<section id="polar-coordinates">
+<h2>Polar coordinates<a class="headerlink" href="#polar-coordinates" title="Permalink to this headline">¶</a></h2>
+<p>With an isomorphism <span class="math notranslate nohighlight">\(\mathbb C \cong \mathbb R^2\)</span>, two important reference objects are defined: a <em>pole</em> and <em>axis</em>. The pole here is the origin <span class="math notranslate nohighlight">\((0, 0)\)</span>; the axis is the <span class="math notranslate nohighlight">\(x\)</span>-axis. Through these objects, any complex number when mapped to a vector in <span class="math notranslate nohighlight">\(\mathbb R^2\)</span> can be faithfully represented by:</p>
+<ul class="simple">
+<li><p>its distance from the pole, <span class="math notranslate nohighlight">\(r\)</span>;</p></li>
+<li><p>the angle it makes with the <span class="math notranslate nohighlight">\(x\)</span>-axis, <span class="math notranslate nohighlight">\(\varphi\)</span>.</p></li>
+</ul>
+<p>The image of a complex number in the <span class="math notranslate nohighlight">\((r, \varphi)\)</span>-plane is referred to as its <em>polar representation</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The distance <span class="math notranslate nohighlight">\(r\)</span> is necessarily positive.</p>
+</div>
+<section id="polar-transformation">
+<h3>Polar transformation<a class="headerlink" href="#polar-transformation" title="Permalink to this headline">¶</a></h3>
+<p>The mapping of <span class="math notranslate nohighlight">\(z\)</span> onto the polar coordinate plane is referred to as a <em>polar transformation</em>. For <span class="math notranslate nohighlight">\(z = x + yi\)</span>, it maps onto <span class="math notranslate nohighlight">\(\mathbb R^2\)</span> by <span class="math notranslate nohighlight">\(z\mapsto (x, y)\)</span>. The polar transformation is obtained by specifying where the real and imaginary parts map to in the <span class="math notranslate nohighlight">\((r, \varphi)\)</span>-plane. Since <span class="math notranslate nohighlight">\(r\)</span> is the distance to the pole, which in this case is the origin, see that</p>
+<div class="math notranslate nohighlight">
+\[r = \sqrt{x^2 + y^2}.
+\]</div>
+<p>With <span class="math notranslate nohighlight">\(r\)</span> known, the angle <span class="math notranslate nohighlight">\(\varphi\)</span> made by <span class="math notranslate nohighlight">\(z\)</span> and the <span class="math notranslate nohighlight">\(x\)</span>-axis is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\varphi 
+=
+\left\{
+\begin{array}{ll}
+\arccos(x/r) &amp; \mbox{if $y \geq 0, r\neq0$}
+\\
+-\arccos(x/r) &amp; \mbox{if $y&lt; 0, r\neq0$}
+\\
+\mbox{undefined} &amp; \mbox{if $r = 0$.}
+\end{array}
+\right.
+\end{split}\]</div>
+</section>
+<section id="id1">
+<h3>Implementation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The method <code class="docutils literal notranslate"><span class="pre">toPolar()</span></code>, callable on any instance of <code class="docutils literal notranslate"><span class="pre">cplx</span></code> sends a complex number to its polar representation. Recall the complex numbers from earlier:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1 + 0i\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 + 1i\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(-3 + 5i\)</span>.</p></li>
+</ul>
+<p>Their polar representations are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">cplx_num</span> <span class="ow">in</span> <span class="n">cplx_nums_to_rep</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cplx_num</span><span class="o">.</span><span class="n">toPolar</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1.0, 0.0)
+(1.0, 1.5707963267948966)
+(5.830951894845301, 2.1112158270654806)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Polar coordinates are a convenient coordinate system to express, model and graph complex systems and functions. In a forthcoming section on complex functions we will return to polar coordinate representations as a means to visualize and graph functions.</p>
+</section>
+</section>
+<section id="fractional-powers">
+<h2>Fractional powers<a class="headerlink" href="#fractional-powers" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h3>Preliminaries<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The polar transformation sends any complex number <span class="math notranslate nohighlight">\(z\)</span> to a radial and angular coordinate <span class="math notranslate nohighlight">\((r, \varphi)\)</span>. This reflects the alternate representation of any complex number,</p>
+<div class="math notranslate nohighlight">
+\[z = re^{\varphi i}.
+\]</div>
+<p>With <span class="math notranslate nohighlight">\(z = x + yi\)</span>, Euler’s identity states <span class="math notranslate nohighlight">\(x = r\cos\varphi\)</span> and <span class="math notranslate nohighlight">\(y = r\sin\varphi\)</span>. That is,</p>
+<div class="math notranslate nohighlight">
+\[e^{\varphi i} = \cos\varphi + (\sin\varphi) i.
+\]</div>
+<p>The utility of this formula lies in calculating <em>fractional powers</em> of complex numbers. For any fraction <span class="math notranslate nohighlight">\(a/b\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+z^{a/b} 
+&amp;= (re^{\varphi i})^{a/b} 
+\\
+&amp;= r^{a/b}e^{\frac{a\varphi}{b}i}
+\\
+&amp;=
+r^{a/b}\left(\cos\left(\frac{a\varphi}{b}\right) + \sin\left(\frac{a\varphi}{b}\right)i\right)
+\end{align}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r^{a/b}\)</span> is the fractional power of <span class="math notranslate nohighlight">\(r\)</span> which, recall, is a real number.</p>
+</section>
+<section id="id3">
+<h3>Implementation<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>In <code class="docutils literal notranslate"><span class="pre">cplxnums.py</span></code> the function <code class="docutils literal notranslate"><span class="pre">powFrac()</span></code> passes instances of <code class="docutils literal notranslate"><span class="pre">cplx</span></code> and a rational number. It returns their fractional power. To illustrate, consider the following complex number,</p>
+<div class="math notranslate nohighlight">
+\[z = -28 + 3i.
+\]</div>
+<p>A fifth root, <span class="math notranslate nohighlight">\(z^{1/5}\)</span>, is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">take_fifth_of_num</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cplx</span><span class="p">([</span><span class="o">-</span><span class="mi">28</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cx</span><span class="o">.</span><span class="n">powFrac</span><span class="p">(</span><span class="n">take_fifth_of_num</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.6013 + 1.112i
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a check we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fifth_root_of_num</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">powFrac</span><span class="p">(</span><span class="n">take_fifth_of_num</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">fifth_root_of_num</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-28.0 + 3.0i
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to multi-valuedness of trigonometric functions, there are more fifth roots of <span class="math notranslate nohighlight">\(z\)</span> than what we calculated above. Four more in fact. These can be found through multiplying by (primitive) roots of nity.</p>
+</div>
+</section>
+<section id="roots-of-unity">
+<h3>Roots of unity<a class="headerlink" href="#roots-of-unity" title="Permalink to this headline">¶</a></h3>
+<p>A famous equation among complex numbers is the equation for the unit,</p>
+<div class="math notranslate nohighlight">
+\[z^n = 1
+\]</div>
+<p>for a given <span class="math notranslate nohighlight">\(n\)</span>. From the fundamental theorem of algebra there will be exactly <span class="math notranslate nohighlight">\(n\)</span> solutions to the above equation, counted with multiplicity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the case where <span class="math notranslate nohighlight">\(n\)</span> is a prime number, there will be <span class="math notranslate nohighlight">\(n\)</span> <em>distinct</em> solutions.</p>
+</div>
+<p>For each <span class="math notranslate nohighlight">\(n\)</span>, any solution to <span class="math notranslate nohighlight">\(z^n = 1\)</span> is referred to as an <em><span class="math notranslate nohighlight">\(n\)</span>-th root of unity</em>. The set of all <span class="math notranslate nohighlight">\(n\)</span>-th roots of unity forms what is known as a group. This is due to the following features:</p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(z_1, z_2\)</span> are solutions, then <span class="math notranslate nohighlight">\(z_1^n = 1\)</span> and <span class="math notranslate nohighlight">\(z_2^n = 1\)</span>. Note that their product <span class="math notranslate nohighlight">\(z_1z_2\)</span> will also be a root of unity,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[(z_1z_2)^n = z_1^nz_2^n = (1)(1) = 1;
+\]</div>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(z^n = 1\)</span> then <span class="math notranslate nohighlight">\((1/z)^n = 1/z^n = 1/1 = 1\)</span>, so <span class="math notranslate nohighlight">\(1/z\)</span> is a root of unity;</p></li>
+<li><p>the unit <span class="math notranslate nohighlight">\(z = 1\)</span> is itself a root of unity.</p></li>
+</ul>
+<p>Roots of polynomials <span class="math notranslate nohighlight">\(f\)</span> (solutions to <span class="math notranslate nohighlight">\(f(x) =0)\)</span> often involve forming fractional powers of complex numbers. The operation of forming such powers is also known as <em>root extraction</em> - an essential part of the notion of a radical.</p>
+<p>As we have seen above, there is an ambiguity here since there is no “single” root of a complex number. If any solution is known, multiplying it by powers of an appropriate root of unity recovers other solutions. In this way, roots of unity can efficiently allow for generating new solutions from old.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">rootsUnity()</span></code> in <code class="docutils literal notranslate"><span class="pre">cplxnum.py</span></code> passses integers <span class="math notranslate nohighlight">\(n\)</span> and returns a list of all <span class="math notranslate nohighlight">\(n\)</span>-rots of unity. For example, a list of all the <span class="math notranslate nohighlight">\(7\)</span>-th roots of unity is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seventh_roots</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">rootsUnity</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">rt</span> <span class="ow">in</span> <span class="n">seventh_roots</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a root is </span><span class="si">{</span><span class="n">rt</span><span class="si">}</span><span class="s2">. Its 7th power is </span><span class="si">{</span><span class="n">rt</span><span class="o">**</span><span class="mi">7</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a root is 1.0 + 0.0i. Its 7th power is 1.0 + 0.0i
+a root is 0.6235 + 0.7818i. Its 7th power is 0.9999 - 0.0002i
+a root is -0.2225 + 0.9749i. Its 7th power is 0.9998 - 0.0001i
+a root is -0.901 + 0.4339i. Its 7th power is 1.0002 + -0.0i
+a root is -0.901 - 0.4339i. Its 7th power is 1.0002 + 0.0i
+a root is -0.2225 - 0.9749i. Its 7th power is 0.9998 + 0.0001i
+a root is 0.6235 - 0.7818i. Its 7th power is 0.9999 + 0.0002i
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="further-application">
+<h3>Further application<a class="headerlink" href="#further-application" title="Permalink to this headline">¶</a></h3>
+<p>Recall earlier that we calculated a fifth root of <code class="docutils literal notranslate"><span class="pre">-28</span> <span class="pre">+</span> <span class="pre">3i</span></code>. To find the other four, we can multiply the solution we found by any fifth root of unity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In fact, we would need to take a <em>primitive</em> root of unity. Any root (except the unit) to a prime will be primitive however. E.g., since <span class="math notranslate nohighlight">\(5\)</span> is prime, any <span class="math notranslate nohighlight">\(5\)</span>-th root of unity (other than <code class="docutils literal notranslate"><span class="pre">1</span></code>) will be a primitive root.</p>
+</div>
+<p>Recall that we labelled the number <code class="docutils literal notranslate"><span class="pre">-28</span> <span class="pre">+</span> <span class="pre">3i</span></code> as <code class="docutils literal notranslate"><span class="pre">take_fifth_root_of</span></code>. We obtained a fifth root which we labelled <code class="docutils literal notranslate"><span class="pre">fifth_root_of_num</span></code>. The other fifth roots of <code class="docutils literal notranslate"><span class="pre">-28</span> <span class="pre">+</span> <span class="pre">3i</span></code> are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fifth_roots</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">rootsUnity</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">fifth_root</span> <span class="o">=</span> <span class="n">fifth_roots</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">all_fifth_roots</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">all_fifth_roots</span> <span class="o">+=</span> <span class="p">[</span><span class="n">fifth_root_of_num</span> <span class="o">*</span> <span class="p">(</span><span class="n">fifth_root</span><span class="o">**</span><span class="n">i</span><span class="p">)]</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">all_fifth_roots</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5524 - 1.1793i
+-0.6419 - 1.8408i
+-1.9491 + 0.0416i
+-0.5627 + 1.8665i
+1.6013 + 1.112i
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a consistency check we can return the fifth power of each number in <code class="docutils literal notranslate"><span class="pre">all_fifth_roots</span></code> to ensure we indeed recover the original number <code class="docutils literal notranslate"><span class="pre">-28</span> <span class="pre">+</span> <span class="pre">3i</span></code>. And so, up to floating point error, we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">root</span> <span class="ow">in</span> <span class="n">all_fifth_roots</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-28.0015 + 2.9989i
+-27.999 + 3.0022i
+-28.0019 + 2.9992i
+-27.9968 + 3.0003i
+-28.0017 + 2.9987i
+</pre></div>
+</div>
+</div>
+</div>
+<p>as expected.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this example we chose the fifth root of unity <code class="docutils literal notranslate"><span class="pre">fifth_root</span> <span class="pre">=</span> <span class="pre">fifth_roots[-1]</span></code>. We could of course choose any other (non-unit) fifth root of unity, e.g., <code class="docutils literal notranslate"><span class="pre">fifth_root</span> <span class="pre">=</span> <span class="pre">fifth_roots[-2]</span></code> or <code class="docutils literal notranslate"><span class="pre">fifth_root</span> <span class="pre">=</span> <span class="pre">fifth_roots[-3]</span></code>. This would return the same fifth roots of <code class="docutils literal notranslate"><span class="pre">-28</span> <span class="pre">+</span> <span class="pre">3i</span></code>, albeit in a different order.</p>
+</div>
+</section>
+</section>
+<section id="evaluation">
+<h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
+<p>With the arithmetic of complex numbers established, it will be possible to evaluate general polynomials on complex numbers. The appropriate method to call is <code class="docutils literal notranslate"><span class="pre">cplxEval()</span></code> on any instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. This method passes an instance of <code class="docutils literal notranslate"><span class="pre">cplx</span></code> and returns an instance of <code class="docutils literal notranslate"><span class="pre">cplx</span></code>.</p>
+<p>As an illustration, consider the polynomial <span class="math notranslate nohighlight">\(f(x) = 1 + x^2\)</span>. On the complex number <span class="math notranslate nohighlight">\(i\)</span> we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">class_scripts</span> <span class="kn">import</span> <span class="n">polynomial</span> <span class="k">as</span> <span class="n">pnml</span>
+
+<span class="n">c_num</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">cplx</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">poly_to_evaluate</span> <span class="o">=</span> <span class="n">pnml</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">poly_to_evaluate</span><span class="o">.</span><span class="n">cplxEval</span><span class="p">(</span><span class="n">c_num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0 + 0.0i
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the above code block we import <code class="docutils literal notranslate"><span class="pre">polynomial.py</span></code> from the directory <code class="docutils literal notranslate"><span class="pre">class_scripts</span></code>. And in <code class="docutils literal notranslate"><span class="pre">class_scripts/polynomial.py</span></code> we have the code from <code class="docutils literal notranslate"><span class="pre">cplxnum.py</span></code>. In order to run code from <em>one</em> script we write our complex number here as <code class="docutils literal notranslate"><span class="pre">c_num</span> <span class="pre">=</span> <span class="pre">pnml.cplx([0,</span> <span class="pre">1])</span></code> instead of <code class="docutils literal notranslate"><span class="pre">cx.cplx([0,</span> <span class="pre">1])</span></code> as in earlier parts of this document. Calling <code class="docutils literal notranslate"><span class="pre">cplxEval()</span></code> and passing <code class="docutils literal notranslate"><span class="pre">cx.cplx([0,</span> <span class="pre">1])</span></code> would result in a type error here.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ratnl.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Rational functions (basics)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="discriminant.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The discriminant</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kowshik Bettadapura<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

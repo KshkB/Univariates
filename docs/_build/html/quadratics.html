@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Quadratic univariates &#8212; Univariate polynomials and rational functions</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The cubics" href="cubics.html" />
+    <link rel="prev" title="The discriminant" href="discriminant.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/smfld.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Univariate polynomials and rational functions</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="poly.html">
+   Polynomials (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ratnl.html">
+   Rational functions (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cplxnum.html">
+   Complex numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discriminant.html">
+   The discriminant
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Quadratic univariates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cubics.html">
+   The cubics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quartics.html">
+   Quartics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/quadratics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fquadratics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/quadratics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-import">
+   Library import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-initialisation">
+     Pre-initialisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation">
+     Initialisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeroes">
+   Zeroes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nature-of-zeroes">
+     Nature of zeroes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Quadratic univariates</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-import">
+   Library import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-initialisation">
+     Pre-initialisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation">
+     Initialisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeroes">
+   Zeroes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nature-of-zeroes">
+     Nature of zeroes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="quadratic-univariates">
+<h1>Quadratic univariates<a class="headerlink" href="#quadratic-univariates" title="Permalink to this headline">¶</a></h1>
+<p>Quadratic polynomials are polynomials of degree <em>two</em>. If the polynomials are in one variable, they are univariate polynomials. Quadratic univariate polynomials are therefore polynomials in one variable of degree <em>two</em>. These are referred to simply as quadratic univariates.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A quadratic might also refer to a <em>homogeneous</em> polynomial of degree two. In this document, by quadratic it is  meant a not-necessarily-homogeneous, degree two polynomial.</p>
+</div>
+<p>Any quadratic univariate <span class="math notranslate nohighlight">\(f(x)\)</span> is of the form</p>
+<div class="math notranslate nohighlight">
+\[f(x) = c + bx + ax^2
+\]</div>
+<p>for coefficients <span class="math notranslate nohighlight">\((a, b, c)\)</span>. As quadratic univariates are univariate polynomials, it makes sense to form the class of quadratic univariates as a subclass of polynomials.</p>
+<section id="library-import">
+<h2>Library import<a class="headerlink" href="#library-import" title="Permalink to this headline">¶</a></h2>
+<p>In the module <code class="docutils literal notranslate"><span class="pre">quadratics</span></code> we find the class <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code> coded as a subclass of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. Below is the libary import.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">class_scripts</span> <span class="kn">import</span> <span class="n">quadratics</span> <span class="k">as</span> <span class="n">qd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<section id="pre-initialisation">
+<h3>Pre-initialisation<a class="headerlink" href="#pre-initialisation" title="Permalink to this headline">¶</a></h3>
+<p>As with <code class="docutils literal notranslate"><span class="pre">Poly</span></code> the class <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code>, being a subclass of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>, has the same attributes. Importantly however, if we pass an array encoding a polynomial with does <em>not</em> have degree two, it is not quadratic and this is detected by <code class="docutils literal notranslate"><span class="pre">__new__</span></code>.</p>
+<p>To illustrate, if we pass the arrays <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2]</span></code> and <code class="docutils literal notranslate"><span class="pre">[-3,</span> <span class="pre">2,</span> <span class="pre">4,</span> <span class="pre">1]</span></code> which encode the polynomials <span class="math notranslate nohighlight">\(1 + 2x\)</span> and <span class="math notranslate nohighlight">\(-3 + 2x + 4x^2 + x^3\)</span> the class <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code> returns:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">qd</span><span class="o">.</span><span class="n">Quadratic</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">qd</span><span class="o">.</span><span class="n">Quadratic</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not quadratic
+Not quadratic
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly, if we pass <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">0]</span></code>, this array encodes <span class="math notranslate nohighlight">\(1 + 2x + 0x^2\)</span>. The class <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code> will nevertheless return:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">qd</span><span class="o">.</span><span class="n">Quadratic</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not quadratic
+</pre></div>
+</div>
+</div>
+</div>
+<p>Attempting to then return an attribute will result in an attribute error.</p>
+</section>
+<section id="initialisation">
+<h3>Initialisation<a class="headerlink" href="#initialisation" title="Permalink to this headline">¶</a></h3>
+<p>For an honest quadratic <span class="math notranslate nohighlight">\(f(x) = c + bx + ax^2\)</span>, it has all the attributes and methods callable on instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. Moreover, it has its discriminant <span class="math notranslate nohighlight">\(b^2 - 4ac\)</span> as an attribute.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is of course possible to call <code class="docutils literal notranslate"><span class="pre">discriminant()</span></code> on an instance of <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code>. This involves forming the derivative, the Sylvester matrix, taking its determinant and multiplying by an appropriate factor. If a  polynomial function of the coefficients is already known, it is much faster to form this instead. This is what is formed by the attribute <code class="docutils literal notranslate"><span class="pre">disc</span></code>.</p>
+</div>
+<p>To illustrate, for the quadratic <span class="math notranslate nohighlight">\(f(x) = -9 + x + 4x^2\)</span> its attributes are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quad_f</span> <span class="o">=</span> <span class="n">qd</span><span class="o">.</span><span class="n">Quadratic</span><span class="p">([</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The polynomial is: </span><span class="si">{</span><span class="n">quad_f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Its coefficient list is: </span><span class="si">{</span><span class="n">quad_f</span><span class="o">.</span><span class="n">coeffs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Its degree is: </span><span class="si">{</span><span class="n">quad_f</span><span class="o">.</span><span class="n">degree</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Its discriminant is: </span><span class="si">{</span><span class="n">quad_f</span><span class="o">.</span><span class="n">disc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The polynomial is: -9x^0 + 1x^1 + 4x^2 
+Its coefficient list is: [-9, 1, 4]
+Its degree is: 2
+Its discriminant is: 145
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a quick test, to see that the <code class="docutils literal notranslate"><span class="pre">discriminant()</span></code> method called on <code class="docutils literal notranslate"><span class="pre">quad_f</span></code> as an instance of <code class="docutils literal notranslate"><span class="pre">Poly</span></code> will agree with <code class="docutils literal notranslate"><span class="pre">quad_f.disc</span></code> above, we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">quad_f</span><span class="o">.</span><span class="n">discriminant</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>145.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="zeroes">
+<h2>Zeroes<a class="headerlink" href="#zeroes" title="Permalink to this headline">¶</a></h2>
+<p>For a quadratic univariate <span class="math notranslate nohighlight">\(f(x) = c + bx + ax^2\)</span>, <span class="math notranslate nohighlight">\(x_0\)</span> is a zero of <span class="math notranslate nohighlight">\(f(x)\)</span> if:</p>
+<div class="math notranslate nohighlight">
+\[c + bx_0 + ax_0^2 = 0.
+\]</div>
+<p>From the fundamental theorem of algebra, <span class="math notranslate nohighlight">\(f\)</span> has degree two so it has two zeroes <span class="math notranslate nohighlight">\(x_1, x_2\in \mathbb C\)</span>. Since the real numbers are not algebraically closed, <span class="math notranslate nohighlight">\(f\)</span> can have <em>at most</em> two real zeroes.</p>
+<p>From the coefficients of the quadratic <span class="math notranslate nohighlight">\(f\)</span>, its zeroes are:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+x_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a}
+&amp;&amp;
+\mbox{and}
+&amp;&amp;
+x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}
+\end{align}
+\]</div>
+<p>See in this case that we indeed have an <em>algebraic</em> (but not polynomial) function of the coefficients <span class="math notranslate nohighlight">\((a, b, c)\)</span> of the quadratic <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<section id="nature-of-zeroes">
+<h3>Nature of zeroes<a class="headerlink" href="#nature-of-zeroes" title="Permalink to this headline">¶</a></h3>
+<p>The polynomials coded as instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code> are all <em>real</em> polynomials. That is, their coefficients are real numbers. Similarly, instances of <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code> are <em>real</em> quadratic univariates. For any real quadratic univariate, both of its zeroes will be either real or complex. This can be deduced directly from the analytic expression for the roots above:</p>
+<ul class="simple">
+<li><p>if the discriminant <span class="math notranslate nohighlight">\(b^2 - 4ac\)</span> is strictly greater than zero, both roots are real;</p></li>
+<li><p>if the discriminant <span class="math notranslate nohighlight">\(b^2 - 4ac\)</span> is equal to zero, there is one real root counted with multiplicity two;</p></li>
+<li><p>if the discriminant <span class="math notranslate nohighlight">\(b^2 - 4ac\)</span> is strictly less than zero, both roots are complex.</p></li>
+</ul>
+<p>The method <code class="docutils literal notranslate"><span class="pre">zeroes()</span></code> on any instance of <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code> returns its zeroes. Based on values of its discriminant, it will return a <span class="math notranslate nohighlight">\(2\)</span>-tuple of real numbers or a <span class="math notranslate nohighlight">\(2\)</span>-tuple of complex numbers which are instances of <code class="docutils literal notranslate"><span class="pre">cplx</span></code>.</p>
+<p>For the following quadratics:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(-12 + 2x^2\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 - 2x + x^2\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(5 + 2x + 3x^2\)</span></p></li>
+</ul>
+<p>we return below their discriminant and their zeroes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qd_1</span> <span class="o">=</span> <span class="n">qd</span><span class="o">.</span><span class="n">Quadratic</span><span class="p">([</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">qd_2</span> <span class="o">=</span> <span class="n">qd</span><span class="o">.</span><span class="n">Quadratic</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">qd_3</span> <span class="o">=</span> <span class="n">qd</span><span class="o">.</span><span class="n">Quadratic</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">qd_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">qd_1</span><span class="p">,</span> <span class="n">qd_2</span><span class="p">,</span> <span class="n">qd_3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">qd_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;for </span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">its discriminant is: </span><span class="si">{</span><span class="n">q</span><span class="o">.</span><span class="n">disc</span><span class="si">}</span><span class="se">\n</span><span class="s2">its zeroes are: </span><span class="si">{</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">zeroes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">str</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">zeroes</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                                                                       
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>for -12x^0 + 2x^2 :
+its discriminant is: 96
+its zeroes are: (&#39;2.449489742783178&#39;, &#39;-2.449489742783178&#39;)
+
+for 1x^0 - 2x^1 + 1x^2 :
+its discriminant is: 0
+its zeroes are: (&#39;1.0&#39;, &#39;1.0&#39;)
+
+for 5x^0 - 2x^1 + 3x^2 :
+its discriminant is: -56
+its zeroes are: (&#39;0.3333 + 1.2472i&#39;, &#39;0.3333 - 1.2472i&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The value of a quadratic at a zero must be zero. And so, as a sanity check, we need to evaluate each quadratic in <code class="docutils literal notranslate"><span class="pre">qd_list</span></code> at the zeroes to make sure we indeed returned a zero. Note, since zeroes may be complex numbers, i.e., instances of <code class="docutils literal notranslate"><span class="pre">cplx</span></code>, we need to use the method <code class="docutils literal notranslate"><span class="pre">cplxEval()</span></code> from <code class="docutils literal notranslate"><span class="pre">Poly</span></code> instead of <code class="docutils literal notranslate"><span class="pre">eval()</span></code>. We see that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">qd_list</span><span class="p">:</span>
+    <span class="n">q_zros</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">zeroes</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">zro</span> <span class="ow">in</span> <span class="n">q_zros</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">zro</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">cplxEval</span><span class="p">(</span><span class="n">zro</span><span class="p">),</span> <span class="mi">5</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">cplxEval</span><span class="p">(</span><span class="n">zro</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.0
+-0.0
+
+
+0.0
+0.0
+
+
+0.0 + 0.0i
+0.0 + 0.0i
+</pre></div>
+</div>
+</div>
+</div>
+<p>As expected each quadratic in <code class="docutils literal notranslate"><span class="pre">qd_list</span></code>, evaluated at each zero, returns zero.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It was mentioned earlier that real quadratics either have two real roots or two complex roots. It is easy to construct quadratics with one complex and one real solution however. E.g., the quadratic <span class="math notranslate nohighlight">\((x - i)(x - 1)\)</span> has roots <span class="math notranslate nohighlight">\(x_1 = i, x_2 = 1\)</span>. Expanding out the product, <span class="math notranslate nohighlight">\((x - i)(x - 1) = i - (i+1)x + x^2\)</span>, see that the coefficients are also a mixture of real and complex numbers. That is, this is necessarily a <em>complex</em> quadratic, not a real quadratic.</p>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="discriminant.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The discriminant</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cubics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The cubics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kowshik Bettadapura<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

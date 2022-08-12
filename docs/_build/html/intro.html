@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction &#8212; Univariate polynomials and rational functions</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Polynomials (basics)" href="poly.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/smfld.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Univariate polynomials and rational functions</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="poly.html">
+   Polynomials (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ratnl.html">
+   Rational functions (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cplxnum.html">
+   Complex numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discriminant.html">
+   The discriminant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quadratics.html">
+   Quadratic univariates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cubics.html">
+   The cubics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quartics.html">
+   Quartics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline">
+   Outline
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomials">
+     Polynomials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rational-function-methods">
+     Rational function methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complex-numbers">
+     Complex numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#low-degree-polynomials">
+     Low degree polynomials
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline">
+   Outline
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomials">
+     Polynomials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rational-function-methods">
+     Rational function methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complex-numbers">
+     Complex numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#low-degree-polynomials">
+     Low degree polynomials
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Univariate functions are functions in one variable. This document concerns univariate polynomials and rational functions. Work on the multivariate case is forthcoming.</p>
+<p>A rational function is a quotient of one polynomial by another. It is not necessarily polynomial itself. E.g., the function <span class="math notranslate nohighlight">\(x\mapsto 1/x\)</span> is rational but not polynomial. The constant function <span class="math notranslate nohighlight">\(x \mapsto 1\)</span> is polynomial however. Consequently, since any polynomial <span class="math notranslate nohighlight">\(x\mapsto f(x)\)</span> can be written</p>
+<div class="math notranslate nohighlight">
+\[x\mapsto \frac{f(x)}{1(x)} = \frac{f(x)}{1}
+\]</div>
+<p>i.e., as a quotient of polynomials, any polynomial is rational.</p>
+<section id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<p>The GitHub repository <code class="docutils literal notranslate"><span class="pre">KshkB/Univariates</span></code> contains files generating this Jupyter book and the modules implementing univariate polynomials and rational functions as Python class types. The purpose of this documentation is describe and demonstrate these classes and their methods.</p>
+<p>Below is a brief outline of what is contained in this documentation.</p>
+<section id="polynomials">
+<h3>Polynomials<a class="headerlink" href="#polynomials" title="Permalink to this headline">¶</a></h3>
+<p>Polynomials of any degree are instances of the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. This class is coded in the module <code class="docutils literal notranslate"><span class="pre">polynomial.py</span></code>. Currently available methods are:</p>
+<ul class="simple">
+<li><p>evaluation on both real and complex numbers;</p></li>
+<li><p>addition, multiplication and division;</p></li>
+<li><p>differentiation to any order;</p></li>
+<li><p>integration to any order;</p></li>
+<li><p>area under the curve;</p></li>
+<li><p>composition;</p></li>
+<li><p>the Sylvester matrix;</p></li>
+<li><p>resultants and the discriminant;</p></li>
+<li><p>Euclid’s algorithm for finding the greatest common divisor for polynomials.</p></li>
+</ul>
+</section>
+<section id="rational-function-methods">
+<h3>Rational function methods<a class="headerlink" href="#rational-function-methods" title="Permalink to this headline">¶</a></h3>
+<p>The class <code class="docutils literal notranslate"><span class="pre">Rational</span></code> in <code class="docutils literal notranslate"><span class="pre">rational.py</span></code> codes for rational functions. That is, instances of <code class="docutils literal notranslate"><span class="pre">Rational</span></code> are rational functions. Methods available on this class are:</p>
+<ul class="simple">
+<li><p>evaluation;</p></li>
+<li><p>addition, multiplication, polynomial long division;</p></li>
+<li><p>differentiation to any order;</p></li>
+<li><p>composition;</p></li>
+<li><p>simplification.</p></li>
+</ul>
+</section>
+<section id="complex-numbers">
+<h3>Complex numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">¶</a></h3>
+<p>The fundamental theorem of algebra necessitates the use of complex numbers. As a class, complex numbers are coded as <code class="docutils literal notranslate"><span class="pre">cplx</span></code> in the module <code class="docutils literal notranslate"><span class="pre">cplxnums.py</span></code>. Methods available on <code class="docutils literal notranslate"><span class="pre">cplx</span></code> are:</p>
+<ul class="simple">
+<li><p>arithmetic (addition, subtraction, multiplication, division);</p></li>
+<li><p>representation on <span class="math notranslate nohighlight">\(2\times2\)</span> real matrices;</p></li>
+<li><p>polar transformation;</p></li>
+<li><p>the roots of unity;</p></li>
+<li><p>fractional powers.</p></li>
+</ul>
+</section>
+<section id="low-degree-polynomials">
+<h3>Low degree polynomials<a class="headerlink" href="#low-degree-polynomials" title="Permalink to this headline">¶</a></h3>
+<p>By low degree, it is meant in degrees <span class="math notranslate nohighlight">\(d = 2, 3, 4\)</span>. These degrees are special since it is only here where general algebraic formulae exist for the zeroes (or, roots).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Linear polynomials are not studied separately.</p>
+</div>
+<p>The module <code class="docutils literal notranslate"><span class="pre">quadratics.py</span></code> encodes quadratic (degree two) polynomials as <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code>.</p>
+<p>The module <code class="docutils literal notranslate"><span class="pre">cubics.py</span></code> encodes the cubic polynomials (degree three) as <code class="docutils literal notranslate"><span class="pre">Cubic</span></code>.</p>
+<p>The module <code class="docutils literal notranslate"><span class="pre">quartics.py</span></code> encodes quartic polynomials (degree four) as <code class="docutils literal notranslate"><span class="pre">Quartic</span></code>.</p>
+<p>Each of these polynomials of specified degree are, of course, polynomials. The classes <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code>, <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> and <code class="docutils literal notranslate"><span class="pre">Quartic</span></code> are accordingly coded as subclasses of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. A common method among each of these classes is <code class="docutils literal notranslate"><span class="pre">zeroes()</span></code>. Calling this on any instance returns a list of all zeroes of the instance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While <code class="docutils literal notranslate"><span class="pre">Quadratic</span></code>, <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> and <code class="docutils literal notranslate"><span class="pre">Quartic</span></code> are subclasses of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>, the method <code class="docutils literal notranslate"><span class="pre">zeroes()</span></code> is not callable on instances <code class="docutils literal notranslate"><span class="pre">Poly</span></code>.</p>
+</div>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="poly.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Polynomials (basics)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kowshik Bettadapura<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

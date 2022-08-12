@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Quartics &#8212; Univariate polynomials and rational functions</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The cubics" href="cubics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/smfld.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Univariate polynomials and rational functions</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="poly.html">
+   Polynomials (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ratnl.html">
+   Rational functions (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cplxnum.html">
+   Complex numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discriminant.html">
+   The discriminant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quadratics.html">
+   Quadratic univariates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cubics.html">
+   The cubics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Quartics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/quartics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fquartics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/quartics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-import">
+   Library import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-initialisation">
+     Pre-initialisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation">
+     Initialisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#depression">
+   Depression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeroes">
+   Zeroes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Quartics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-import">
+   Library import
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-initialisation">
+     Pre-initialisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation">
+     Initialisation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#depression">
+   Depression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeroes">
+   Zeroes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="quartics">
+<h1>Quartics<a class="headerlink" href="#quartics" title="Permalink to this headline">¶</a></h1>
+<p>In degree four we find the quartics. In one variable, any quartic univariate <span class="math notranslate nohighlight">\(f(x)\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[f(x) = e + dx + cx^2 + bx^3 + ax^4
+\]</div>
+<p>for <span class="math notranslate nohighlight">\(a\neq0\)</span>. Quartics are coded in <code class="docutils literal notranslate"><span class="pre">quartics.py</span></code> under the class <code class="docutils literal notranslate"><span class="pre">Quartic</span></code>, which is a subclass of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. That is, quartics are instances of <code class="docutils literal notranslate"><span class="pre">Quartic</span></code>. As quartics are also polynomials, they will be instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>.</p>
+<section id="library-import">
+<h2>Library import<a class="headerlink" href="#library-import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">class_scripts</span> <span class="kn">import</span> <span class="n">quartic</span> <span class="k">as</span> <span class="n">qrtc</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<section id="pre-initialisation">
+<h3>Pre-initialisation<a class="headerlink" href="#pre-initialisation" title="Permalink to this headline">¶</a></h3>
+<p>As with quadratics and cubics, quartics are polynomials of degree <span class="math notranslate nohighlight">\(4\)</span> with <em>non-zero</em> leading coefficient. This is detected by the <code class="docutils literal notranslate"><span class="pre">__new__</span></code> method which runs before initialising any instance.</p>
+<p>The following are examples of polynomials which are <em>not</em> quartic.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">not_quart_1</span> <span class="o">=</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Quartic</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">not_quart_2</span> <span class="o">=</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Quartic</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">not_quart_3</span> <span class="o">=</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Quartic</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">not_quart_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">not_quart_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">not_quart_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not quartic
+Not quartic
+Not quartic
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="initialisation">
+<h3>Initialisation<a class="headerlink" href="#initialisation" title="Permalink to this headline">¶</a></h3>
+<p>For an honest quartic <span class="math notranslate nohighlight">\(f(x) = e + dx + cx^2 + bx^3 + ax^4\)</span>, all of its attributes are inherited from the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. For example, for</p>
+<div class="math notranslate nohighlight">
+\[f(x) = -1 + x + 3x^2 - 9x^3 + 2x^4
+\]</div>
+<p>its attributes are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quart</span> <span class="o">=</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Quartic</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The degree of </span><span class="si">{</span><span class="n">quart</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">quart</span><span class="o">.</span><span class="n">degree</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The coefficients defining </span><span class="si">{</span><span class="n">quart</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">quart</span><span class="o">.</span><span class="n">coeffs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The degree of -1x^0 + 1x^1 + 3x^2 - 9x^3 + 2x^4  is: 4
+The coefficients defining -1x^0 + 1x^1 + 3x^2 - 9x^3 + 2x^4  is: [-1, 1, 3, -9, 2]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Unlike for the quadratic and cubic, the discriminant of a quartic is not coded as an attribute of <code class="docutils literal notranslate"><span class="pre">Quartic</span></code>. It must be obtained instead by calling the method <code class="docutils literal notranslate"><span class="pre">discriminant()</span></code>. For the quartic above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The discriminant if </span><span class="si">{</span><span class="n">quart</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">quart</span><span class="o">.</span><span class="n">discriminant</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The discriminant if -1x^0 + 1x^1 + 3x^2 - 9x^3 + 2x^4  is: -72752.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="depression">
+<h2>Depression<a class="headerlink" href="#depression" title="Permalink to this headline">¶</a></h2>
+<p>As with the cubic, it is always possible to transform a quartic to “depressed” form. A <em>depressed quartic</em> is a quartic <span class="math notranslate nohighlight">\(g(x)\)</span> of the form,</p>
+<div class="math notranslate nohighlight">
+\[g(x) = \gamma + \beta x + \alpha x^2 + x^4
+\]</div>
+<p>With <span class="math notranslate nohighlight">\(f(x) = e + dx + cx^2 + bx^3 + ax^4\)</span>, if can be placed in depressed form through the variable change <span class="math notranslate nohighlight">\(x \mapsto x - \frac{b}{4a}\)</span>, followed by dividing through the leading coefficient <span class="math notranslate nohighlight">\(a\)</span>. See <a class="reference external" href="https://en.wikipedia.org/wiki/Quartic_equation#Converting_to_a_depressed_quartic">this Wikipedia entry</a> for the formula relating the coefficients of <span class="math notranslate nohighlight">\(f\)</span> with those of <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<section id="implementation">
+<h3>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<p>The formula relating the coefficients of a quartic to its depressed form is implemented by the method <code class="docutils literal notranslate"><span class="pre">toDepressed()</span></code>. Recall, the same method is callable on instances of <code class="docutils literal notranslate"><span class="pre">Cubic</span></code>. This method passes in quartics and returns their depressed form using the formula from the above Wikipedia entry.</p>
+<p>As an illustration, for the quartic <span class="math notranslate nohighlight">\(f(x) = -1 + x + 3x^2 - 9x^3 + 2x^4\)</span> from above, its depression is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">depr_quart</span> <span class="o">=</span> <span class="n">quart</span><span class="o">.</span><span class="n">toDepressed</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">depr_quart</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.8445x^0 - 7.5156x^1 - 6.0938x^2 + 1x^4 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Recall that depression can also be derived through variable change. And so to check the validity of the formula implemented in <code class="docutils literal notranslate"><span class="pre">toDepressed()</span></code>, we can compose <span class="math notranslate nohighlight">\(f(x)\)</span> with the polynomial <span class="math notranslate nohighlight">\(x - b/4a\)</span> and divide through by <span class="math notranslate nohighlight">\(a\)</span>. Doing this we find:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">quart</span><span class="o">.</span><span class="n">coeff</span><span class="p">(</span><span class="n">quart</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">quart</span><span class="o">.</span><span class="n">coeff</span><span class="p">(</span><span class="n">quart</span><span class="o">.</span><span class="n">degree</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">composite</span> <span class="o">=</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="p">),</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">quart_composed</span> <span class="o">=</span> <span class="n">quart</span><span class="o">.</span><span class="n">composeWith</span><span class="p">(</span><span class="n">composite</span><span class="p">)</span>
+<span class="n">quart_depressed</span> <span class="o">=</span> <span class="n">quart_composed</span> <span class="o">*</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Poly</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">a</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">quart_depressed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.8445x^0 - 7.5156x^1 - 6.0938x^2 + 1.0x^4 
+</pre></div>
+</div>
+</div>
+</div>
+<p>This validates the formula used in the method <code class="docutils literal notranslate"><span class="pre">toDepressed()</span></code>.</p>
+</section>
+</section>
+<section id="zeroes">
+<h2>Zeroes<a class="headerlink" href="#zeroes" title="Permalink to this headline">¶</a></h2>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<p>For a quartic univariate <span class="math notranslate nohighlight">\(f(x) = e + dx + cx^2 + bx^3 + ax^4\)</span>, a zero is a value <span class="math notranslate nohighlight">\(x_0\)</span> such that <span class="math notranslate nohighlight">\(f(x_0) = 0\)</span>. The quartics are the highest degree polynomials for which an algebraic formula exists for their zeroes. That is, a formula involving only algebraic expressions of the coefficients.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is known that in degrees <em>five</em> and higher, no such algebraic formula exists for returning roots.</p>
+</div>
+<p>As with cubics, the method for deriving the formula for quartic roots involves first depressing the quartic. The attentive reader might note however that the module <code class="docutils literal notranslate"><span class="pre">quartic.py</span></code> imports <code class="docutils literal notranslate"><span class="pre">quadratic.py</span></code> and <code class="docutils literal notranslate"><span class="pre">cubic.py</span></code>. This is because any formula for the roots of a quartic involve solving a cubic equation. From <a class="reference external" href="https://en.wikipedia.org/wiki/Quartic_equation#Solving_a_depressed_quartic_when_b%E2%89%A00">this entry</a> a formula for the roots of a general quartic (in depressed form), <span class="math notranslate nohighlight">\(f(x) =  c + bx + ax^2 + x^4\)</span>, for <span class="math notranslate nohighlight">\(a, b\)</span> non-zero, can be expressed via any solution of the following cubic equation (in variable <span class="math notranslate nohighlight">\(y\)</span>),</p>
+<div class="math notranslate nohighlight">
+\[\left(ac - \frac{1}{4}b^2\right) - 2cy - ay^2 + 2y^3 = 0
+\]</div>
+<p>In a degenerate case <span class="math notranslate nohighlight">\(b = 0\)</span>, the depressed quartic can be solved using the quadratic equation.</p>
+</section>
+<section id="id1">
+<h3>Implementation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The method <code class="docutils literal notranslate"><span class="pre">zeroes()</span></code> is callable on any instance of the class <code class="docutils literal notranslate"><span class="pre">Quartic</span></code>. It passes in any instance of <code class="docutils literal notranslate"><span class="pre">Quartic</span></code> and returns a list of its zeros.</p>
+<p>To illustrate, for the following quartics:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(-12 + 3 x + 2x^4\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(3 - x + 7x^2 + 5x^3 - 7x^4\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(8 + 2x^2 + 3x^4\)</span></p></li>
+</ul>
+<p>their zeroes are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qt_1</span> <span class="o">=</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Quartic</span><span class="p">([</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">qt_2</span> <span class="o">=</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Quartic</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">])</span>
+<span class="n">qt_3</span> <span class="o">=</span> <span class="n">qrtc</span><span class="o">.</span><span class="n">Quartic</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">qt_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">qt_1</span><span class="p">,</span> <span class="n">qt_2</span><span class="p">,</span> <span class="n">qt_3</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">qt</span> <span class="ow">in</span> <span class="n">qt_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">qt</span><span class="o">.</span><span class="n">zeroes</span><span class="p">(),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.4047 + 0.0i
+-1.7108 + 0.0i
+0.1531 + 1.5727i
+0.1531 - 1.5727i
+
+
+0.105 + 0.5412i
+0.105 - 0.5412i
+1.466 + 0.0i
+-0.9617 + 0.0i
+
+
+0.8061 + 0.9915i
+-0.8061 - 0.9915i
+0.8061 - 0.9915i
+-0.8061 + 0.9915i
+</pre></div>
+</div>
+</div>
+</div>
+<p>As a check now that we have indeed returned zeroes, we run the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">qt</span> <span class="ow">in</span> <span class="n">qt_list</span><span class="p">:</span>
+    <span class="n">zros</span> <span class="o">=</span> <span class="n">qt</span><span class="o">.</span><span class="n">zeroes</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">zro</span> <span class="ow">in</span> <span class="n">zros</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">qt</span><span class="o">.</span><span class="n">cplxEval</span><span class="p">(</span><span class="n">zro</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0 + 0.0i
+0.0 + 0.0i
+0.0 + -0.0i
+0.0 + -0.0i
+
+
+0.0 + 0.0i
+0.0 + 0.0i
+0.0 + 0.0i
+0.0 + 0.0i
+
+
+0.0 + 0.0i
+0.0 + 0.0i
+0.0 + -0.0i
+0.0 + -0.0i
+</pre></div>
+</div>
+</div>
+</div>
+<p>We find that the quartic evaluated at each zero indeed returns zero, as expected.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="cubics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The cubics</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kowshik Bettadapura<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

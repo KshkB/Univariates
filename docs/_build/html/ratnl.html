@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Rational functions (basics) &#8212; Univariate polynomials and rational functions</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Complex numbers" href="cplxnum.html" />
+    <link rel="prev" title="Polynomials (basics)" href="poly.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/smfld.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Univariate polynomials and rational functions</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="poly.html">
+   Polynomials (basics)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Rational functions (basics)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cplxnum.html">
+   Complex numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="discriminant.html">
+   The discriminant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quadratics.html">
+   Quadratic univariates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cubics.html">
+   The cubics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quartics.html">
+   Quartics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ratnl.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fratnl.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ratnl.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-background">
+   Mathematical background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-rational-class">
+   The Rational class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-import">
+     Library import
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes-and-representation">
+   Attributes and representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic">
+   Arithmetic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#powers">
+     Powers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composition">
+     Composition
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentiation">
+   Differentiation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#higher-order-differentiation">
+     Higher order differentiation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simplification">
+   Simplification
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Rational functions (basics)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematical-background">
+   Mathematical background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-rational-class">
+   The Rational class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-import">
+     Library import
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes-and-representation">
+   Attributes and representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic">
+   Arithmetic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation">
+     Implementation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#powers">
+     Powers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composition">
+     Composition
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentiation">
+   Differentiation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#higher-order-differentiation">
+     Higher order differentiation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simplification">
+   Simplification
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Implementation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="rational-functions-basics">
+<h1>Rational functions (basics)<a class="headerlink" href="#rational-functions-basics" title="Permalink to this headline">¶</a></h1>
+<p>Any polynomial is a rational function but not conversely. A <em>rational function</em> in one variable is a the ratio of one polynomial to another. Any rational function <span class="math notranslate nohighlight">\(R(x)\)</span> can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[R(x)
+=
+\frac{f(x)}{g(x)}
+\]</div>
+<p>for polynomials <span class="math notranslate nohighlight">\(f(x), g(x)\)</span>.</p>
+<p>Many of the properties for polynomials adapt straightforwardly to rational functions, albeit with minor changes. Furthemore, many operations for rational functions can be expressed in terms of operations on polynomials. For instance, arithmetical operations such as addition and multiplication can expressed in terms of those operations on  polynomials. For rational functions <span class="math notranslate nohighlight">\(R(x), S(x)\)</span> given by polynomials,</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+R(x)
+=
+\frac{f(x)}{g(x)}
+&amp;&amp;
+\mbox{and}
+&amp;&amp;
+S(x) 
+=
+\frac{h(x)}{i(x)}
+\end{align}
+\]</div>
+<p>we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+R(x) + S(x)
+&amp;= 
+\frac{f(x) i(x) + g(x) h(x)}{g(x) i(x)};
+\\
+R(x)\cdot S(x)
+&amp;=
+\frac{f(x)\cdot h(x)}{g(x)\cdot i(x)}.
+\end{align}
+\end{split}\]</div>
+<p>See that on the left hand side, addition and multiplication is for rational functions. On the right hand side instances of addition and multiplication are for polynomials.</p>
+<section id="mathematical-background">
+<h2>Mathematical background<a class="headerlink" href="#mathematical-background" title="Permalink to this headline">¶</a></h2>
+<p>Recall that the ring of polynomials over a field <span class="math notranslate nohighlight">\(\mathbb K\)</span> are dual to affine <span class="math notranslate nohighlight">\(\mathbb K\)</span> space <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span>. That is, the affine space <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K}\)</span> can be understood as the spectrum of the ring <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span>. Does there exist an analogous interpretation for rational functions?</p>
+<p>Firstly, as arithmetical operations make sense for rational functions, the set of rational functions in one variable also forms a ring (in fact, it forms a <em>field</em> in much the same way that the rational numbers <span class="math notranslate nohighlight">\(\mathbb Q\)</span> is a field obtained from the integers <span class="math notranslate nohighlight">\(\mathbb Z\)</span>, which is only a ring). Moreover, as any polynomial is a rational, the set of polynomials is <em>contained</em> in that of rationals. More strongly, as we have seen above, arithematical operations for rationals can be expressed interms of operations on polynomials. It follows that containment of polynomials in rationals goes beyond simply an inclusion of sets. We have in fact an inclusion of <em>rings</em>.</p>
+<p>To phrase this symbolically, recall that <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span> denotes the ring of polynomials in one variable. Let <span class="math notranslate nohighlight">\(\mathbb K(x)\)</span> denote the ring of rational functions in one variable. Then there exists an <em>embedding as rings</em> <span class="math notranslate nohighlight">\(\iota: \mathbb K[x]\subset \mathbb K(x)\)</span>. What we want to know however is whether there is a geometric interpretation for <span class="math notranslate nohighlight">\(\mathbb K(x)\)</span> in analogy to that for <span class="math notranslate nohighlight">\(\mathbb K[x]\)</span>? That is, is there some topological space <span class="math notranslate nohighlight">\(X\)</span> which can be realised as the spectrum of <span class="math notranslate nohighlight">\(\mathbb K(x)\)</span>?</p>
+<p>Generically, for the set of <em>all</em> rational functions in one variable, there is no such <em>affine</em> space. The main issue lies in the domains of definition. For a given rational function <span class="math notranslate nohighlight">\(R(x)\)</span>, it will not be defined at values of <span class="math notranslate nohighlight">\(x\)</span> which are roots of the denominator. Hence, in contrast to polynomials, different rational functions will have different domains of definition, c.f., <span class="math notranslate nohighlight">\(R(x) = 1/x\)</span> and <span class="math notranslate nohighlight">\(S(x) = 1/(x-1)\)</span>.</p>
+<p>In order to arrive at a geometric understanding of rational functions, it is necessary to consider the notion of “partial functions” on <em>projective spaces</em>.</p>
+<p>To stay within the realm of affine spaces, if a particular denominator polynomial is specified, then the locus of points at which it does <em>not</em> vanish defines an open subspace of affine space. This in fact characterizes <em>all</em> affine subspaces (known as “affine subvarieties”). And so, if <span class="math notranslate nohighlight">\(D\subset \mathbb A_{\mathbb K}\)</span> is a domain at which <span class="math notranslate nohighlight">\(g(x) = 0\)</span> for all <span class="math notranslate nohighlight">\(x \in D\)</span>, then the ring of <em>functions on <span class="math notranslate nohighlight">\(D\)</span></em> is the ring of remainders <span class="math notranslate nohighlight">\(\mathbb K[x]/(g(x))\)</span>, i.e., <span class="math notranslate nohighlight">\(D\)</span> is the spectrum of <span class="math notranslate nohighlight">\(\mathbb K[x]/(g(x))\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the one dimensional case, <span class="math notranslate nohighlight">\(D\)</span> will just be a finite collection of points which are roots of <span class="math notranslate nohighlight">\(g(x)\)</span>. Indeed, recall that the Polynomial Remainder Theorem gives an interpretation of polynomial evaluation via polynomial division. For a polynomial <span class="math notranslate nohighlight">\(f(x)\)</span> and value <span class="math notranslate nohighlight">\(\lambda\)</span>, <span class="math notranslate nohighlight">\(f(\lambda)\)</span> is the remainder of <span class="math notranslate nohighlight">\(f(x)/(x-\lambda)\)</span>. Here <span class="math notranslate nohighlight">\(g(x) = x - \lambda\)</span> is a polynomial with root <span class="math notranslate nohighlight">\(x = \lambda\)</span>. Note therefore that <em>any</em> polynomial <span class="math notranslate nohighlight">\(f(x)\)</span> which vanishes at <span class="math notranslate nohighlight">\(\lambda\)</span> is necessarily a multiple of <span class="math notranslate nohighlight">\(g(x)\)</span>. Hence, any function <span class="math notranslate nohighlight">\(f\)</span> which is <em>not</em> equal to a multiple of <span class="math notranslate nohighlight">\(g(x)\)</span> will be a <em>non-zero</em> function on the singleton point <span class="math notranslate nohighlight">\(D = \{\lambda\}\subset \mathbb A_{\mathbb K}\)</span>.</p>
+<p>Written another way, if <span class="math notranslate nohighlight">\(\mathbb K[D] = \mathbb K[\{\lambda\}]\)</span> denotes the ring of functions on the singleton <span class="math notranslate nohighlight">\(D = \{\lambda\}\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbb K[D] = \mathbb K[\{\lambda\}] = \frac{\mathbb K[x]}{(x-\lambda)}.
+\]</div>
+</div>
+</section>
+<section id="the-rational-class">
+<h2>The Rational class<a class="headerlink" href="#the-rational-class" title="Permalink to this headline">¶</a></h2>
+<p>A class for rational functions is coded in the module <code class="docutils literal notranslate"><span class="pre">rational.py</span></code> as <code class="docutils literal notranslate"><span class="pre">Rational</span></code>. Since operations on rational functions can be expressed through polynomials, it is convenient to draw on methods from the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code> in <code class="docutils literal notranslate"><span class="pre">polynomial.py</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This does <em>not</em> mean <code class="docutils literal notranslate"><span class="pre">Rational</span></code> is a subclass of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. It does not inherit all the same attributes.</p>
+</div>
+<section id="library-import">
+<h3>Library import<a class="headerlink" href="#library-import" title="Permalink to this headline">¶</a></h3>
+<p>The module coding for the class of rational functions is <code class="docutils literal notranslate"><span class="pre">rational.py</span></code>. Below is the appropriate library import for
+preparing this document.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">class_scripts</span> <span class="kn">import</span> <span class="n">rational</span> <span class="k">as</span> <span class="n">rtnl</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="attributes-and-representation">
+<h2>Attributes and representation<a class="headerlink" href="#attributes-and-representation" title="Permalink to this headline">¶</a></h2>
+<p>Many of the methods and attributes in <code class="docutils literal notranslate"><span class="pre">Poly</span></code> adapt to <code class="docutils literal notranslate"><span class="pre">Rational</span></code>. While in <code class="docutils literal notranslate"><span class="pre">Poly</span></code> we need only remember one polynomial, in <code class="docutils literal notranslate"><span class="pre">Rational</span></code> two polynomials are stored with an indication of which is the numerator and which the denominator.</p>
+<p>For the rational function</p>
+<div class="math notranslate nohighlight">
+\[R(x)
+= 
+\frac{1}{x^2}
+\]</div>
+<p>it is represented as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rat_1</span> <span class="o">=</span> <span class="n">rtnl</span><span class="o">.</span><span class="n">Rational</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">rat_1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rational([1], [0, 0, 1])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The above print statement has returned the a statement in machine readable format. In more human readable format we have, as with <code class="docutils literal notranslate"><span class="pre">Poly</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rat_1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numerator: 1x^0 
+denominator: 1x^2 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Evidently, an instance of <code class="docutils literal notranslate"><span class="pre">Rational</span></code> consists of two instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. Attributes stored for <code class="docutils literal notranslate"><span class="pre">Rational</span></code> are the attributes of the defining polynomial instances. These are called as follows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rat_1</span><span class="o">.</span><span class="n">numerator</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rat_1</span><span class="o">.</span><span class="n">numdeg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rat_1</span><span class="o">.</span><span class="n">denominator</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rat_1</span><span class="o">.</span><span class="n">denomdeg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1]
+0
+[0, 0, 1]
+2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="arithmetic">
+<h2>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this headline">¶</a></h2>
+<section id="evaluation">
+<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
+<p>Unlike for polynomials, rational functions are not necessarily defined for any argument values. The method <code class="docutils literal notranslate"><span class="pre">eval()</span></code> takes this into account and returns a value if it exists or returns <code class="docutils literal notranslate"><span class="pre">Undefined</span></code> if it does not. For the above rational function <span class="math notranslate nohighlight">\(R(x) = 1/x^2\)</span>, it is defined for all <span class="math notranslate nohighlight">\(x \in \{x:x\neq0\}\)</span>.</p>
+<p>At values <span class="math notranslate nohighlight">\(x = 1\)</span> and <span class="math notranslate nohighlight">\(x = 0\)</span> respectively we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">val_1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">val_2</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rat_1</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rat_1</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+Undefined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="implementation">
+<h3>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<p>As with instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code> we can adapt addition, subtraction, multiplication and division to <code class="docutils literal notranslate"><span class="pre">Rational</span></code>. To illustrate, for rational functions</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+R(x) = \frac{1}{x^2}
+&amp;&amp;
+\mbox{and}
+&amp;&amp;
+S(x) = \frac{-1 + x^2}{x}
+\end{align}
+\]</div>
+<p>we will return:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R(x) + S(x)\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(R(x) - S(x)\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(R(x) \cdot S(x)\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(R(x)/S(x)\)</span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rat_R</span> <span class="o">=</span> <span class="n">rtnl</span><span class="o">.</span><span class="n">Rational</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">rat_S</span> <span class="o">=</span> <span class="n">rtnl</span><span class="o">.</span><span class="n">Rational</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">rat_R</span> <span class="o">+</span> <span class="n">rat_S</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">rat_R</span> <span class="o">-</span> <span class="n">rat_S</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">rat_R</span> <span class="o">*</span> <span class="n">rat_S</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">rat_R</span> <span class="o">/</span> <span class="n">rat_S</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numerator: 1.0x^1 - 1.0x^2 + 1.0x^4 
+denominator: 1.0x^3 
+
+numerator: 1.0x^1 + 1.0x^2 - 1.0x^4 
+denominator: 1.0x^3 
+
+numerator: -1.0x^0 + 1.0x^2 
+denominator: 1.0x^3 
+
+numerator: 1.0x^1 
+denominator: -1.0x^2 + 1.0x^4 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The division method <code class="docutils literal notranslate"><span class="pre">__truediv__</span></code> does not perform any polynomial division as with instances of <code class="docutils literal notranslate"><span class="pre">Poly</span></code>. For rational functions <span class="math notranslate nohighlight">\(R = f/g\)</span> and <span class="math notranslate nohighlight">\(S = h/i\)</span>, the division operator <code class="docutils literal notranslate"><span class="pre">/</span></code> returns for <code class="docutils literal notranslate"><span class="pre">R/S</span></code> the formal division,</p>
+<div class="math notranslate nohighlight">
+\[\frac{R}{S} = \frac{f}{g}\cdot \frac{i}{h}.
+\]</div>
+</div>
+<p>In this way, division of two rational functions returns a rational function.</p>
+</section>
+<section id="powers">
+<h3>Powers<a class="headerlink" href="#powers" title="Permalink to this headline">¶</a></h3>
+<p>From the <code class="docutils literal notranslate"><span class="pre">__mul__</span></code> method we can define <code class="docutils literal notranslate"><span class="pre">__pow__</span></code> implementing powers of rational functions. For the rational <span class="math notranslate nohighlight">\(R(x) = \frac{1}{x^2}\)</span>, its first five powers are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">-th power of </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">rat_R</span><span class="p">)</span><span class="si">}</span><span class="s2"> is:</span><span class="se">\n</span><span class="si">{</span><span class="n">rat_R</span><span class="o">**</span><span class="n">i</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The 0-th power of Rational([1], [0, 0, 1]) is:
+numerator: 1x^0 
+denominator: 1x^0 
+
+The 1-th power of Rational([1], [0, 0, 1]) is:
+numerator: 1x^0 
+denominator: 1x^2 
+
+The 2-th power of Rational([1], [0, 0, 1]) is:
+numerator: 1.0x^0 
+denominator: 1.0x^4 
+
+The 3-th power of Rational([1], [0, 0, 1]) is:
+numerator: 1.0x^0 
+denominator: 1.0x^6 
+
+The 4-th power of Rational([1], [0, 0, 1]) is:
+numerator: 1.0x^0 
+denominator: 1.0x^8 
+
+The 5-th power of Rational([1], [0, 0, 1]) is:
+numerator: 1.0x^0 
+denominator: 1.0x^10 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="composition">
+<h3>Composition<a class="headerlink" href="#composition" title="Permalink to this headline">¶</a></h3>
+<p>Formally, we might think of rational functions as mappings <span class="math notranslate nohighlight">\(\mathbb A_{\mathbb K} \rightarrow \mathbb A_{\mathbb K}\)</span>. In particular, it makes sense to compose them as in the case of polynomials. For rationals <span class="math notranslate nohighlight">\(R(x), S(x)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[T(x) = (R\circ S)(x) = R(S(x)) = \frac{f(S(x))}{g(S(x))}
+\]</div>
+<p>With <span class="math notranslate nohighlight">\(R(x) = 1/x^2\)</span> and <span class="math notranslate nohighlight">\(S(x) = (-1 + x^2)/x\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[T(x)
+=
+\frac{1}{S(x)^2}
+=
+\frac{x^2}{(-1 + x^2)^2}
+\]</div>
+<p>We can call the method <code class="docutils literal notranslate"><span class="pre">composeWith()</span></code> to implement composition:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rat_R</span><span class="o">.</span><span class="n">composeWith</span><span class="p">(</span><span class="n">rat_S</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numerator: 1.0x^3 
+denominator: 1.0x^1 - 2.0x^3 + 1.0x^5 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have not simplified the above expressions. We will come to simplification shortly.</p>
+</div>
+</section>
+</section>
+<section id="differentiation">
+<h2>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">¶</a></h2>
+<p>As with the arithmetic, differentiation of rational functions can be expressed through differentiation of polynomials. For <span class="math notranslate nohighlight">\(R(x) = f(x)/g(x)\)</span> the quotient polynomials <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>, its derivative is</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx}R(x)
+=
+\frac{\left(\frac{d}{dx}f\right)\cdot g(x) - f(x)\cdot \left(\frac{d}{dx}g\right)}{g(x)^2}
+\]</div>
+<p>On the left-hand side is the derivative of rational function <span class="math notranslate nohighlight">\(R(x)\)</span>; while on the right-hand we find derivatives of polynomials. The method <code class="docutils literal notranslate"><span class="pre">diff()</span></code> passes no arguments and returns the derivative of an instance of <code class="docutils literal notranslate"><span class="pre">Rational</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As with polynomials, the derivative of a rational function is again rational. Differentiation therefore preserves instances of the class <code class="docutils literal notranslate"><span class="pre">Rational</span></code>.</p>
+</div>
+<p>As an illustration, for <span class="math notranslate nohighlight">\(R(x) = 1/x^2\)</span>, its derivative is:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rat_R</span><span class="o">.</span><span class="n">diff</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numerator: -2.0x^1 
+denominator: 1.0x^4 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="higher-order-differentiation">
+<h3>Higher order differentiation<a class="headerlink" href="#higher-order-differentiation" title="Permalink to this headline">¶</a></h3>
+<p>The method <code class="docutils literal notranslate"><span class="pre">Hdiff()</span></code> passes in an integer and returns the <span class="math notranslate nohighlight">\(n\)</span>-th order derivative <span class="math notranslate nohighlight">\(d^n/dx^n\)</span>. The first five derivatives of <span class="math notranslate nohighlight">\(R(x)\)</span> are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">-th derivative of </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">rat_R</span><span class="p">)</span><span class="si">}</span><span class="s2"> is:</span><span class="se">\n</span><span class="si">{</span><span class="n">rat_R</span><span class="o">.</span><span class="n">Hdiff</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The 0-th derivative of Rational([1], [0, 0, 1]) is:
+numerator: 1x^0 
+denominator: 1x^2 
+
+The 1-th derivative of Rational([1], [0, 0, 1]) is:
+numerator: -2.0x^1 
+denominator: 1.0x^4 
+
+The 2-th derivative of Rational([1], [0, 0, 1]) is:
+numerator: 6.0x^4 
+denominator: 1.0x^8 
+
+The 3-th derivative of Rational([1], [0, 0, 1]) is:
+numerator: -24.0x^11 
+denominator: 1.0x^16 
+
+The 4-th derivative of Rational([1], [0, 0, 1]) is:
+numerator: 120.0x^26 
+denominator: 1.0x^32 
+
+The 5-th derivative of Rational([1], [0, 0, 1]) is:
+numerator: -720.0x^57 
+denominator: 1.0x^64 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Unlike for polynomials, it is a more subtle issue to integrate rational functions. While there is a general formula, it involves analytic functions of complex variables. In particlar it is <em>not</em> a rational function.</p>
+</section>
+</section>
+<section id="simplification">
+<h2>Simplification<a class="headerlink" href="#simplification" title="Permalink to this headline">¶</a></h2>
+<p>If two integers <span class="math notranslate nohighlight">\(m, n\)</span> share a common multiple <span class="math notranslate nohighlight">\(p\)</span>, then <span class="math notranslate nohighlight">\(m/n = (m/p)/(n/p)\)</span>. Similarly, for any rational function <span class="math notranslate nohighlight">\(R = f/g\)</span> and any common divisor <span class="math notranslate nohighlight">\(h\)</span></p>
+<div class="math notranslate nohighlight">
+\[R = \frac{f}{g} = \frac{f/h}{g/h}.
+\]</div>
+<p>In this way, rational functions can be simplified by simultaneously reducing the degrees of the numerator and denominator. For example, with <span class="math notranslate nohighlight">\(f(x) = x^3\)</span> and <span class="math notranslate nohighlight">\(g(x) = x^7\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[R(x) = \frac{f(x)}{g(x)} = \frac{x^3}{x^7} = \frac{1}{x^4}.
+\]</div>
+<section id="id1">
+<h3>Implementation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Recall that the class <code class="docutils literal notranslate"><span class="pre">Poly</span></code> contains the method <code class="docutils literal notranslate"><span class="pre">gcd()</span></code> which passes in two instances <span class="math notranslate nohighlight">\(f, g\)</span> and returns their greatest common divisor. This forms the basis for the method <code class="docutils literal notranslate"><span class="pre">simply()</span></code>, callable on any instance of <code class="docutils literal notranslate"><span class="pre">Rational</span></code>.</p>
+<p>To illustrate, the following rational function:</p>
+<div class="math notranslate nohighlight">
+\[\frac{-1 + x^2}{1 + x}
+\]</div>
+<p>simplifies to:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">to_simplify</span> <span class="o">=</span> <span class="n">rtnl</span><span class="o">.</span><span class="n">Rational</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">to_simplify</span><span class="o">.</span><span class="n">simplify</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numerator: -1.0x^0 + 1.0x^1 
+denominator: 1.0x^0 
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is indeed the correct simplification upon noting <span class="math notranslate nohighlight">\(-1 + x^2 = (1 + x)(1-x)\)</span>. On dividing through by <span class="math notranslate nohighlight">\(1+x\)</span> we obtain the rational function <span class="math notranslate nohighlight">\(\frac{-1 + x}{1}\)</span>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="poly.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Polynomials (basics)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cplxnum.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Complex numbers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kowshik Bettadapura<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
